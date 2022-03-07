@@ -1,9 +1,18 @@
-Started GET "/" for 127.0.0.1 at 2022-03-07 11:25:54 +0200
+Started GET "/" for 127.0.0.1 at 2022-03-07 10:39:55 +0100
   
-ActiveRecord::ConnectionNotEstablished (FATAL:  role "shahier" does not exist
+ActiveRecord::NoDatabaseError (We could not find your database: Recip_app_development. Which can be found in the database configuration file located at config/database.yml.
+
+To resolve this issue:
+
+- Did you create the database for this app, or delete it? You may need to create your database.
+- Has the database name changed? Check your database.yml config has the correct database name.
+
+To create your database, run:
+
+        bin/rails db:create
 ):
   
-activerecord (7.0.2.2) lib/active_record/connection_adapters/postgresql_adapter.rb:87:in `rescue in new_client'
+activerecord (7.0.2.2) lib/active_record/connection_adapters/postgresql_adapter.rb:81:in `rescue in new_client'
 activerecord (7.0.2.2) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
 activerecord (7.0.2.2) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
 activerecord (7.0.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
@@ -56,12 +65,21 @@ puma (5.6.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
 puma (5.6.2) lib/puma/request.rb:76:in `handle_request'
 puma (5.6.2) lib/puma/server.rb:441:in `process_client'
 puma (5.6.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
-Started GET "/" for 127.0.0.1 at 2022-03-07 11:30:14 +0200
+Started GET "/" for 127.0.0.1 at 2022-03-07 10:40:01 +0100
   
-ActiveRecord::ConnectionNotEstablished (FATAL:  role "shahier" does not exist
+ActiveRecord::NoDatabaseError (We could not find your database: Recip_app_development. Which can be found in the database configuration file located at config/database.yml.
+
+To resolve this issue:
+
+- Did you create the database for this app, or delete it? You may need to create your database.
+- Has the database name changed? Check your database.yml config has the correct database name.
+
+To create your database, run:
+
+        bin/rails db:create
 ):
   
-activerecord (7.0.2.2) lib/active_record/connection_adapters/postgresql_adapter.rb:87:in `rescue in new_client'
+activerecord (7.0.2.2) lib/active_record/connection_adapters/postgresql_adapter.rb:81:in `rescue in new_client'
 activerecord (7.0.2.2) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
 activerecord (7.0.2.2) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
 activerecord (7.0.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
@@ -114,12 +132,21 @@ puma (5.6.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
 puma (5.6.2) lib/puma/request.rb:76:in `handle_request'
 puma (5.6.2) lib/puma/server.rb:441:in `process_client'
 puma (5.6.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
-Started GET "/" for 127.0.0.1 at 2022-03-07 11:33:06 +0200
+Started GET "/" for 127.0.0.1 at 2022-03-07 10:43:52 +0100
   
-ActiveRecord::ConnectionNotEstablished (FATAL:  role "shahier" does not exist
+ActiveRecord::NoDatabaseError (We could not find your database: Recip_app_development. Which can be found in the database configuration file located at config/database.yml.
+
+To resolve this issue:
+
+- Did you create the database for this app, or delete it? You may need to create your database.
+- Has the database name changed? Check your database.yml config has the correct database name.
+
+To create your database, run:
+
+        bin/rails db:create
 ):
   
-activerecord (7.0.2.2) lib/active_record/connection_adapters/postgresql_adapter.rb:87:in `rescue in new_client'
+activerecord (7.0.2.2) lib/active_record/connection_adapters/postgresql_adapter.rb:81:in `rescue in new_client'
 activerecord (7.0.2.2) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
 activerecord (7.0.2.2) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
 activerecord (7.0.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
