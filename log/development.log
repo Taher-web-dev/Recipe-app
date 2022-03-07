@@ -199,3 +199,13 @@ puma (5.6.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
 puma (5.6.2) lib/puma/request.rb:76:in `handle_request'
 puma (5.6.2) lib/puma/server.rb:441:in `process_client'
 puma (5.6.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE "Recip_app_development" ENCODING = 'unicode'[0m
+  [1m[35m (16719.7ms)[0m  [1m[35mCREATE DATABASE "Recip_app_development" ENCODING = 'unicode'[0m
+  [1m[35m (10473.9ms)[0m  [1m[35mCREATE DATABASE "Recip_app_test" ENCODING = 'unicode'[0m
+Started GET "/" for 127.0.0.1 at 2022-03-07 11:11:52 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/taher/.rbenv/versions/3.1.0/lib/ruby/gems/3.1.0/gems/railties-7.0.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/taher/.rbenv/versions/3.1.0/lib/ruby/gems/3.1.0/gems/railties-7.0.2.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 3.6ms | Allocations: 808)
+Completed 200 OK in 249ms (Views: 7.6ms | ActiveRecord: 0.0ms | Allocations: 7070)
+
+
