@@ -24,7 +24,7 @@ body { height: 100vh}
 
 .sign-in-wrapper {
   display: grid;
-  grid-template-columns: 47.5% 47.5%;
+  grid-template-columns: 50% 49%;
   width: 100%;
   height: 80vh;
 }
@@ -74,20 +74,20 @@ body { height: 100vh}
 }
 
 .greeting-sign-in{
-  margin-left: 30%;
+  margin-left: 40%;
   margin-top: 150px;
   color: white;
   margin-bottom: 25px;
 }
 
 .question-sign-in {
-  margin-left: 22.5%;
+  margin-left: 35%;
   color: white;
 }
 
  .sign-in-links a{
   color: white;
-  margin-left: 35%;
+  margin-left: 40%;
   background-color: rgb(247, 165, 100);
   text-decoration: none;
 }
@@ -101,4 +101,12 @@ body { height: 100vh}
   background-color: rgb(32, 112, 173);
   text-decoration: none;
   padding: 5px 50px;
+}
+
+.alert {
+  color: rgb(241, 66, 81);
+}
+
+.notice {
+  color: rgb(111, 77, 34);
 }
