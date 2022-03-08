@@ -1,0 +1,31 @@
+<div class="sign-in-wrapper">
+<div class="sign-in">
+<h2 class="log-in-title">Log in</h2>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <%= f.email_field :email, class:"sign-in-email", autofocus: true, autocomplete: "off",placeholder: "User Name" %>
+
+  <%= f.password_field :password, autocomplete: "off", class:"sign-in-email", placeholder: "Password" %>
+
+  <% if devise_mapping.rememberable? %>
+    <div class="remember-me">
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me %>
+    </div>
+  <% end %>
+
+  <div class="actions-log-in">
+    <%= f.submit "Login", class: "log-in-btn"%>
+  </div>
+<% end %>
+</div>
+<div class="sign-in-new">
+  <h2 class="greeting-sign-in"> Welcome ! </h2>
+  <h4 class="question-sign-in"> Don't have an account?</h4>
+  <h4 class="question-sign-in"> Forget your password? </h4>
+  <div class="sign-in-links">
+    <%= render "devise/shared/links" %>
+  </div>
+  
+</div>
+</div>
