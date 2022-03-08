@@ -1,7 +1,19 @@
 body {
   background-color: rgb(40, 36, 46) ;
 }
-
+.wrapper {
+  border: 4px dotted white;
+  margin-top: 125px;
+  width: 90%;
+  margin-left: 5%;
+}
 .public_recipes_title {
-  
+  color: white;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  border-radius: 25%;
+  width: 24%;
+  padding-left: 0.5%;
+  margin-left: 37.75%;
+  margin-top: 5px;
 }

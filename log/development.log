@@ -11276,3 +11276,210 @@ Processing by PublicRecipesController#index as HTML
 Completed 200 OK in 47ms (Views: 44.2ms | ActiveRecord: 0.0ms | Allocations: 26550)
 
 
+Started GET "/public_recipes" for 127.0.0.1 at 2022-03-08 10:00:15 +0100
+Processing by PublicRecipesController#index as HTML
+  Rendering layout layouts/public_recipes.html.erb
+  Rendering public_recipes/index.html.erb within layouts/public_recipes
+  Rendered public_recipes/index.html.erb within layouts/public_recipes (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/public_recipes.html.erb (Duration: 359.2ms | Allocations: 8572)
+Completed 200 OK in 361ms (Views: 360.2ms | ActiveRecord: 0.0ms | Allocations: 8837)
+
+
+Started GET "/public_recipes" for 127.0.0.1 at 2022-03-08 10:00:43 +0100
+Processing by PublicRecipesController#index as HTML
+  Rendering layout layouts/public_recipes.html.erb
+  Rendering public_recipes/index.html.erb within layouts/public_recipes
+  Rendered public_recipes/index.html.erb within layouts/public_recipes (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/public_recipes.html.erb (Duration: 348.7ms | Allocations: 8452)
+Completed 200 OK in 350ms (Views: 349.4ms | ActiveRecord: 0.0ms | Allocations: 8698)
+
+
+Started GET "/public_recipes" for 127.0.0.1 at 2022-03-08 10:01:00 +0100
+Processing by PublicRecipesController#index as HTML
+  Rendering layout layouts/public_recipes.html.erb
+  Rendering public_recipes/index.html.erb within layouts/public_recipes
+  Rendered public_recipes/index.html.erb within layouts/public_recipes (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/public_recipes.html.erb (Duration: 347.6ms | Allocations: 8456)
+Completed 200 OK in 349ms (Views: 348.3ms | ActiveRecord: 0.0ms | Allocations: 8702)
+
+
+Started GET "/public_recipes" for 127.0.0.1 at 2022-03-08 10:01:35 +0100
+Processing by PublicRecipesController#index as HTML
+  Rendering layout layouts/public_recipes.html.erb
+  Rendering public_recipes/index.html.erb within layouts/public_recipes
+  Rendered public_recipes/index.html.erb within layouts/public_recipes (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/public_recipes.html.erb (Duration: 347.0ms | Allocations: 8471)
+Completed 200 OK in 348ms (Views: 347.6ms | ActiveRecord: 0.0ms | Allocations: 8717)
+
+
+Started GET "/public_recipes" for 127.0.0.1 at 2022-03-08 10:02:34 +0100
+Processing by PublicRecipesController#index as HTML
+  Rendering layout layouts/public_recipes.html.erb
+  Rendering public_recipes/index.html.erb within layouts/public_recipes
+  Rendered public_recipes/index.html.erb within layouts/public_recipes (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/public_recipes.html.erb (Duration: 348.6ms | Allocations: 8477)
+Completed 200 OK in 350ms (Views: 349.2ms | Allocations: 8720)
+
+
+Started GET "/public_recipes" for 127.0.0.1 at 2022-03-08 10:03:35 +0100
+Processing by PublicRecipesController#index as HTML
+  Rendering layout layouts/public_recipes.html.erb
+  Rendering public_recipes/index.html.erb within layouts/public_recipes
+  Rendered public_recipes/index.html.erb within layouts/public_recipes (Duration: 0.2ms | Allocations: 18)
+  Rendered layout layouts/public_recipes.html.erb (Duration: 344.8ms | Allocations: 8470)
+Completed 200 OK in 346ms (Views: 345.5ms | Allocations: 8713)
+
+
+Started GET "/public_recipes" for 127.0.0.1 at 2022-03-08 10:04:13 +0100
+Processing by PublicRecipesController#index as HTML
+  Rendering layout layouts/public_recipes.html.erb
+  Rendering public_recipes/index.html.erb within layouts/public_recipes
+  Rendered public_recipes/index.html.erb within layouts/public_recipes (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/public_recipes.html.erb (Duration: 338.1ms | Allocations: 8458)
+Completed 200 OK in 339ms (Views: 338.7ms | Allocations: 8701)
+
+
+Started GET "/public_recipes" for 127.0.0.1 at 2022-03-08 10:04:26 +0100
+Processing by PublicRecipesController#index as HTML
+  Rendering layout layouts/public_recipes.html.erb
+  Rendering public_recipes/index.html.erb within layouts/public_recipes
+  Rendered public_recipes/index.html.erb within layouts/public_recipes (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/public_recipes.html.erb (Duration: 342.9ms | Allocations: 8463)
+Completed 200 OK in 344ms (Views: 343.5ms | Allocations: 8706)
+
+
+Started GET "/public_recipes" for 127.0.0.1 at 2022-03-08 10:04:41 +0100
+Processing by PublicRecipesController#index as HTML
+  Rendering layout layouts/public_recipes.html.erb
+  Rendering public_recipes/index.html.erb within layouts/public_recipes
+  Rendered public_recipes/index.html.erb within layouts/public_recipes (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/public_recipes.html.erb (Duration: 436.5ms | Allocations: 8468)
+Completed 200 OK in 437ms (Views: 437.0ms | Allocations: 8711)
+
+
+Started GET "/public_recipes" for 127.0.0.1 at 2022-03-08 10:04:56 +0100
+Processing by PublicRecipesController#index as HTML
+  Rendering layout layouts/public_recipes.html.erb
+  Rendering public_recipes/index.html.erb within layouts/public_recipes
+  Rendered public_recipes/index.html.erb within layouts/public_recipes (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/public_recipes.html.erb (Duration: 344.0ms | Allocations: 8446)
+Completed 200 OK in 345ms (Views: 344.6ms | Allocations: 8689)
+
+
+Started GET "/public_recipes" for 127.0.0.1 at 2022-03-08 10:10:17 +0100
+Processing by PublicRecipesController#index as HTML
+  Rendering layout layouts/public_recipes.html.erb
+  Rendering public_recipes/index.html.erb within layouts/public_recipes
+  Rendered public_recipes/index.html.erb within layouts/public_recipes (Duration: 0.8ms | Allocations: 199)
+  Rendered layout layouts/public_recipes.html.erb (Duration: 363.8ms | Allocations: 9402)
+Completed 200 OK in 369ms (Views: 367.1ms | Allocations: 10467)
+
+
+Started GET "/public_recipes" for 127.0.0.1 at 2022-03-08 10:10:54 +0100
+Processing by PublicRecipesController#index as HTML
+  Rendering layout layouts/public_recipes.html.erb
+  Rendering public_recipes/index.html.erb within layouts/public_recipes
+  Rendered public_recipes/index.html.erb within layouts/public_recipes (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/public_recipes.html.erb (Duration: 352.0ms | Allocations: 8471)
+Completed 200 OK in 353ms (Views: 352.5ms | Allocations: 8733)
+
+
+Started GET "/public_recipes" for 127.0.0.1 at 2022-03-08 10:11:17 +0100
+Processing by PublicRecipesController#index as HTML
+  Rendering layout layouts/public_recipes.html.erb
+  Rendering public_recipes/index.html.erb within layouts/public_recipes
+  Rendered public_recipes/index.html.erb within layouts/public_recipes (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/public_recipes.html.erb (Duration: 352.3ms | Allocations: 8459)
+Completed 200 OK in 354ms (Views: 353.0ms | Allocations: 8702)
+
+
+Started GET "/public_recipes" for 127.0.0.1 at 2022-03-08 10:11:38 +0100
+Processing by PublicRecipesController#index as HTML
+  Rendering layout layouts/public_recipes.html.erb
+  Rendering public_recipes/index.html.erb within layouts/public_recipes
+  Rendered public_recipes/index.html.erb within layouts/public_recipes (Duration: 0.0ms | Allocations: 18)
+  Rendered layout layouts/public_recipes.html.erb (Duration: 341.8ms | Allocations: 8466)
+Completed 200 OK in 343ms (Views: 342.3ms | Allocations: 8709)
+
+
+Started GET "/public_recipes" for 127.0.0.1 at 2022-03-08 10:12:03 +0100
+Processing by PublicRecipesController#index as HTML
+  Rendering layout layouts/public_recipes.html.erb
+  Rendering public_recipes/index.html.erb within layouts/public_recipes
+  Rendered public_recipes/index.html.erb within layouts/public_recipes (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/public_recipes.html.erb (Duration: 353.1ms | Allocations: 8454)
+Completed 200 OK in 355ms (Views: 353.9ms | Allocations: 8697)
+
+
+Started GET "/public_recipes" for 127.0.0.1 at 2022-03-08 10:12:24 +0100
+Processing by PublicRecipesController#index as HTML
+  Rendering layout layouts/public_recipes.html.erb
+  Rendering public_recipes/index.html.erb within layouts/public_recipes
+  Rendered public_recipes/index.html.erb within layouts/public_recipes (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/public_recipes.html.erb (Duration: 343.2ms | Allocations: 8460)
+Completed 200 OK in 344ms (Views: 343.8ms | Allocations: 8703)
+
+
+Started GET "/public_recipes" for 127.0.0.1 at 2022-03-08 10:13:07 +0100
+Processing by PublicRecipesController#index as HTML
+  Rendering layout layouts/public_recipes.html.erb
+  Rendering public_recipes/index.html.erb within layouts/public_recipes
+  Rendered public_recipes/index.html.erb within layouts/public_recipes (Duration: 0.3ms | Allocations: 18)
+  Rendered layout layouts/public_recipes.html.erb (Duration: 368.4ms | Allocations: 8477)
+Completed 200 OK in 371ms (Views: 369.6ms | Allocations: 8720)
+
+
+Started GET "/public_recipes" for 127.0.0.1 at 2022-03-08 10:13:30 +0100
+Processing by PublicRecipesController#index as HTML
+  Rendering layout layouts/public_recipes.html.erb
+  Rendering public_recipes/index.html.erb within layouts/public_recipes
+  Rendered public_recipes/index.html.erb within layouts/public_recipes (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/public_recipes.html.erb (Duration: 350.3ms | Allocations: 8466)
+Completed 200 OK in 352ms (Views: 351.0ms | Allocations: 8709)
+
+
+Started GET "/public_recipes" for 127.0.0.1 at 2022-03-08 10:13:49 +0100
+Processing by PublicRecipesController#index as HTML
+  Rendering layout layouts/public_recipes.html.erb
+  Rendering public_recipes/index.html.erb within layouts/public_recipes
+  Rendered public_recipes/index.html.erb within layouts/public_recipes (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/public_recipes.html.erb (Duration: 335.8ms | Allocations: 8480)
+Completed 200 OK in 337ms (Views: 336.4ms | Allocations: 8723)
+
+
+Started GET "/public_recipes" for 127.0.0.1 at 2022-03-08 10:13:59 +0100
+Processing by PublicRecipesController#index as HTML
+  Rendering layout layouts/public_recipes.html.erb
+  Rendering public_recipes/index.html.erb within layouts/public_recipes
+  Rendered public_recipes/index.html.erb within layouts/public_recipes (Duration: 0.3ms | Allocations: 18)
+  Rendered layout layouts/public_recipes.html.erb (Duration: 492.3ms | Allocations: 8466)
+Completed 200 OK in 497ms (Views: 493.7ms | Allocations: 8709)
+
+
+Started GET "/public_recipes" for 127.0.0.1 at 2022-03-08 10:14:12 +0100
+Processing by PublicRecipesController#index as HTML
+  Rendering layout layouts/public_recipes.html.erb
+  Rendering public_recipes/index.html.erb within layouts/public_recipes
+  Rendered public_recipes/index.html.erb within layouts/public_recipes (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/public_recipes.html.erb (Duration: 12.5ms | Allocations: 6132)
+Completed 200 OK in 14ms (Views: 13.2ms | Allocations: 6375)
+
+
+Started GET "/public_recipes" for 127.0.0.1 at 2022-03-08 10:14:38 +0100
+Processing by PublicRecipesController#index as HTML
+  Rendering layout layouts/public_recipes.html.erb
+  Rendering public_recipes/index.html.erb within layouts/public_recipes
+  Rendered public_recipes/index.html.erb within layouts/public_recipes (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/public_recipes.html.erb (Duration: 356.8ms | Allocations: 8475)
+Completed 200 OK in 359ms (Views: 358.1ms | Allocations: 8718)
+
+
+Started GET "/public_recipes" for 127.0.0.1 at 2022-03-08 10:15:05 +0100
+Processing by PublicRecipesController#index as HTML
+  Rendering layout layouts/public_recipes.html.erb
+  Rendering public_recipes/index.html.erb within layouts/public_recipes
+  Rendered public_recipes/index.html.erb within layouts/public_recipes (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/public_recipes.html.erb (Duration: 349.9ms | Allocations: 8457)
+Completed 200 OK in 351ms (Views: 350.5ms | Allocations: 8700)
+
+
