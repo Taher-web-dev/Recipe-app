@@ -12862,3 +12862,55 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 13ms (Views: 10.5ms | ActiveRecord: 0.1ms | Allocations: 7738)
 
 
+Started GET "/public_recipes" for 127.0.0.1 at 2022-03-08 12:47:29 +0100
+Processing by PublicRecipesController#index as HTML
+  Rendering layout layouts/public_recipes.html.erb
+  Rendering public_recipes/index.html.erb within layouts/public_recipes
+  Rendered public_recipes/index.html.erb within layouts/public_recipes (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/public_recipes.html.erb (Duration: 19.1ms | Allocations: 6116)
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.0ms | Allocations: 6363)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2022-03-08 12:52:55 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 40ms (ActiveRecord: 22.3ms | Allocations: 4329)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-08 12:52:55 +0100
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 190)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.1ms | Allocations: 848)
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 6781)
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.0ms | Allocations: 7299)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-03-08 12:52:59 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 11.4ms | Allocations: 385)
+  Rendered devise/shared/_links.html.erb (Duration: 1.1ms | Allocations: 143)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 46.8ms | Allocations: 2617)
+  Rendered layout layouts/application.html.erb (Duration: 78.2ms | Allocations: 8737)
+Completed 200 OK in 89ms (Views: 84.5ms | ActiveRecord: 0.0ms | Allocations: 10415)
+
+
+  [1m[35m (98.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5710058475801362025)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateRecipes (20220308125840)
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1388.6ms)[0m  [1m[35mCREATE TABLE "recipes" ("id" bigserial primary key, "name" character varying, "preparation_time" time, "cooking_time" time, "description" text, "public" boolean, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_9606fce865"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (72.8ms)[0m  [1m[35mCREATE INDEX "index_recipes_on_user_id" ON "recipes" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220308125840"]]
+  [1m[36mTRANSACTION (34.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (55.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5710058475801362025)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
