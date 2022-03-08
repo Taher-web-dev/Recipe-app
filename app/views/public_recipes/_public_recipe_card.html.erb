@@ -1,6 +1,7 @@
-<% title= recipe.Name %>
+<% title= recipe.name %>
+<% id = recipe.id %>
 <% owner= User.find(recipe.user_id) %>
-<% foods_list = recipe.recipe_foods %>
+<% foods_list = RecipeFood.where(recipe_id: id) %>
 <% total_food = foods_list.length %>
 <% total_price = 0 %>
 <% foods_list.each do |food| %>

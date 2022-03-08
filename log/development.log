@@ -12960,3 +12960,339 @@ FOREIGN KEY ("recipe_id")
   [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
   [1m[36mFood Create (7.2ms)[0m  [1m[32mINSERT INTO "foods" ("name", "measurement_unit", "price", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "banana"], ["measurement_unit", "g"], ["price", "0.4"], ["user_id", 11], ["created_at", "2022-03-08 13:50:12.730944"], ["updated_at", "2022-03-08 13:50:12.730944"]]
   [1m[36mTRANSACTION (19.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mFood Load (10.8ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  [1m[36mRecipeFood Load (87.6ms)[0m  [1m[34mSELECT "recipe_foods".* FROM "recipe_foods"[0m
+  [1m[36mRecipe Load (15.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Create (1143.9ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "preparation_time", "cooking_time", "description", "public", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "milk shake"], ["preparation_time", nil], ["cooking_time", nil], ["description", "very delicious recipe"], ["public", true], ["user_id", 10], ["created_at", "2022-03-08 15:19:58.656514"], ["updated_at", "2022-03-08 15:19:58.656514"]]
+  [1m[36mTRANSACTION (156.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Create (0.5ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "preparation_time", "cooking_time", "description", "public", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "couscous"], ["preparation_time", nil], ["cooking_time", nil], ["description", "traditional recipe"], ["public", true], ["user_id", 11], ["created_at", "2022-03-08 15:20:53.624554"], ["updated_at", "2022-03-08 15:20:53.624554"]]
+  [1m[36mTRANSACTION (19.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Create (1.7ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "preparation_time", "cooking_time", "description", "public", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Spagetti"], ["preparation_time", nil], ["cooking_time", nil], ["description", "well known italian food"], ["public", true], ["user_id", 11], ["created_at", "2022-03-08 15:24:47.793939"], ["updated_at", "2022-03-08 15:24:47.793939"]]
+  [1m[36mTRANSACTION (19.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Create (10.0ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "preparation_time", "cooking_time", "description", "public", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "riz"], ["preparation_time", nil], ["cooking_time", nil], ["description", "tunisian food."], ["public", false], ["user_id", 11], ["created_at", "2022-03-08 15:26:38.795546"], ["updated_at", "2022-03-08 15:26:38.795546"]]
+  [1m[36mTRANSACTION (162.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipeFood Create (1.2ms)[0m  [1m[32mINSERT INTO "recipe_foods" ("quantity", "food_id", "recipe_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 30], ["food_id", 1], ["recipe_id", 1], ["created_at", "2022-03-08 15:30:16.170632"], ["updated_at", "2022-03-08 15:30:16.170632"]]
+  [1m[36mTRANSACTION (135.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipeFood Create (0.8ms)[0m  [1m[32mINSERT INTO "recipe_foods" ("quantity", "food_id", "recipe_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 10], ["food_id", 2], ["recipe_id", 1], ["created_at", "2022-03-08 15:31:26.113761"], ["updated_at", "2022-03-08 15:31:26.113761"]]
+  [1m[36mTRANSACTION (12.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipeFood Create (0.9ms)[0m  [1m[32mINSERT INTO "recipe_foods" ("quantity", "food_id", "recipe_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 7], ["food_id", 4], ["recipe_id", 1], ["created_at", "2022-03-08 15:31:55.106794"], ["updated_at", "2022-03-08 15:31:55.106794"]]
+  [1m[36mTRANSACTION (19.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipeFood Create (1.0ms)[0m  [1m[32mINSERT INTO "recipe_foods" ("quantity", "food_id", "recipe_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 17], ["food_id", 4], ["recipe_id", 2], ["created_at", "2022-03-08 15:32:17.635914"], ["updated_at", "2022-03-08 15:32:17.635914"]]
+  [1m[36mTRANSACTION (16.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipeFood Create (1.4ms)[0m  [1m[32mINSERT INTO "recipe_foods" ("quantity", "food_id", "recipe_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 13], ["food_id", 3], ["recipe_id", 2], ["created_at", "2022-03-08 15:32:45.436843"], ["updated_at", "2022-03-08 15:32:45.436843"]]
+  [1m[36mTRANSACTION (17.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipeFood Create (0.8ms)[0m  [1m[32mINSERT INTO "recipe_foods" ("quantity", "food_id", "recipe_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 13], ["food_id", 2], ["recipe_id", 3], ["created_at", "2022-03-08 15:33:11.061414"], ["updated_at", "2022-03-08 15:33:11.061414"]]
+  [1m[36mTRANSACTION (541.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipeFood Create (1.0ms)[0m  [1m[32mINSERT INTO "recipe_foods" ("quantity", "food_id", "recipe_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 19], ["food_id", 3], ["recipe_id", 3], ["created_at", "2022-03-08 15:33:37.164737"], ["updated_at", "2022-03-08 15:33:37.164737"]]
+  [1m[36mTRANSACTION (155.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipeFood Create (1.0ms)[0m  [1m[32mINSERT INTO "recipe_foods" ("quantity", "food_id", "recipe_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 11], ["food_id", 1], ["recipe_id", 3], ["created_at", "2022-03-08 15:34:09.067795"], ["updated_at", "2022-03-08 15:34:09.067795"]]
+  [1m[36mTRANSACTION (18.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipeFood Create (0.4ms)[0m  [1m[32mINSERT INTO "recipe_foods" ("quantity", "food_id", "recipe_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 5], ["food_id", 2], ["recipe_id", 3], ["created_at", "2022-03-08 15:34:31.703656"], ["updated_at", "2022-03-08 15:34:31.703656"]]
+  [1m[36mTRANSACTION (33.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipeFood Create (0.9ms)[0m  [1m[32mINSERT INTO "recipe_foods" ("quantity", "food_id", "recipe_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 15], ["food_id", 3], ["recipe_id", 3], ["created_at", "2022-03-08 15:34:57.026263"], ["updated_at", "2022-03-08 15:34:57.026263"]]
+  [1m[36mTRANSACTION (16.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipeFood Create (1.0ms)[0m  [1m[32mINSERT INTO "recipe_foods" ("quantity", "food_id", "recipe_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 25], ["food_id", 3], ["recipe_id", 4], ["created_at", "2022-03-08 15:35:23.871454"], ["updated_at", "2022-03-08 15:35:23.871454"]]
+  [1m[36mTRANSACTION (22.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipeFood Create (0.4ms)[0m  [1m[32mINSERT INTO "recipe_foods" ("quantity", "food_id", "recipe_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 25], ["food_id", 1], ["recipe_id", 4], ["created_at", "2022-03-08 15:35:41.577565"], ["updated_at", "2022-03-08 15:35:41.577565"]]
+  [1m[36mTRANSACTION (31.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipeFood Create (0.4ms)[0m  [1m[32mINSERT INTO "recipe_foods" ("quantity", "food_id", "recipe_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 12], ["food_id", 3], ["recipe_id", 4], ["created_at", "2022-03-08 15:35:57.384765"], ["updated_at", "2022-03-08 15:35:57.384765"]]
+  [1m[36mTRANSACTION (19.1ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for 127.0.0.1 at 2022-03-08 16:38:17 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 4.2ms | Allocations: 1793)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 138.2ms | Allocations: 20220)
+  Rendered layout layouts/application.html.erb (Duration: 2194.0ms | Allocations: 89514)
+Completed 200 OK in 2345ms (Views: 2201.5ms | ActiveRecord: 6.0ms | Allocations: 98026)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-03-08 16:38:45 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"ttaherhagui@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "ttaherhagui@gmail.com"], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 1005ms (ActiveRecord: 3.0ms | Allocations: 7923)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-08 16:38:46 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 484)
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 6530)
+Completed 200 OK in 17ms (Views: 13.2ms | ActiveRecord: 0.3ms | Allocations: 8117)
+
+
+Started GET "/public_recipes" for 127.0.0.1 at 2022-03-08 16:38:51 +0100
+Processing by PublicRecipesController#index as HTML
+  Rendering layout layouts/public_recipes.html.erb
+  Rendering public_recipes/index.html.erb within layouts/public_recipes
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."public" = $1[0m  [["public", true]]
+  ↳ app/views/public_recipes/index.html.erb:3
+  Rendered public_recipes/_public_recipe_card.html.erb (Duration: 28.3ms | Allocations: 8893)
+  Rendered public_recipes/index.html.erb within layouts/public_recipes (Duration: 55.1ms | Allocations: 15955)
+  Rendered layout layouts/public_recipes.html.erb (Duration: 55.3ms | Allocations: 16050)
+Completed 500 Internal Server Error in 104ms (ActiveRecord: 2.7ms | Allocations: 19797)
+
+
+  
+ActionView::Template::Error (undefined method `Name' for #<Recipe id: 1, name: "milk shake", preparation_time: nil, cooking_time: nil, description: "very delicious recipe", public: true, user_id: 10, created_at: "2022-03-08 15:19:58.656514000 +0000", updated_at: "2022-03-08 15:19:58.656514000 +0000">
+Did you mean?  name
+               name?
+               name=):
+    1: <% title= recipe.Name %>
+    2: <% owner= User.find(recipe.user_id) %>
+    3: <% foods_list = recipe.recipe_foods %>
+    4: <% total_food = foods_list.length %>
+  
+app/views/public_recipes/_public_recipe_card.html.erb:1
+app/views/public_recipes/index.html.erb:4
+app/views/public_recipes/index.html.erb:3
+Started GET "/public_recipes" for 127.0.0.1 at 2022-03-08 16:39:14 +0100
+Processing by PublicRecipesController#index as HTML
+  Rendering layout layouts/public_recipes.html.erb
+  Rendering public_recipes/index.html.erb within layouts/public_recipes
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."public" = $1[0m  [["public", true]]
+  ↳ app/views/public_recipes/index.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/public_recipes/_public_recipe_card.html.erb:2
+  Rendered public_recipes/_public_recipe_card.html.erb (Duration: 25.8ms | Allocations: 9845)
+  Rendered public_recipes/index.html.erb within layouts/public_recipes (Duration: 33.7ms | Allocations: 11043)
+  Rendered layout layouts/public_recipes.html.erb (Duration: 34.0ms | Allocations: 11138)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.5ms | Allocations: 12272)
+
+
+  
+ActionView::Template::Error (undefined method `recipe_foods' for #<Recipe id: 1, name: "milk shake", preparation_time: nil, cooking_time: nil, description: "very delicious recipe", public: true, user_id: 10, created_at: "2022-03-08 15:19:58.656514000 +0000", updated_at: "2022-03-08 15:19:58.656514000 +0000">):
+    1: <% title= recipe.name %>
+    2: <% owner= User.find(recipe.user_id) %>
+    3: <% foods_list = recipe.recipe_foods %>
+    4: <% total_food = foods_list.length %>
+    5: <% total_price = 0 %>
+    6: <% foods_list.each do |food| %>
+  
+app/views/public_recipes/_public_recipe_card.html.erb:3
+app/views/public_recipes/index.html.erb:4
+app/views/public_recipes/index.html.erb:3
+Started GET "/public_recipes" for 127.0.0.1 at 2022-03-08 16:42:48 +0100
+Processing by PublicRecipesController#index as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 2663)
+
+
+  
+SyntaxError (/home/taher/Documents/Microverse_Program/Module_5/Recipe-app/app/models/recipe.rb:3: syntax error, unexpected ':', expecting `end'
+  has_many : recipe_food
+           ^
+):
+  
+app/models/recipe.rb:3: syntax error, unexpected ':', expecting `end'
+app/models/recipe.rb:3: syntax error, unexpected ':', expecting `end'
+app/models/recipe.rb:3: syntax error, unexpected ':', expecting `end'
+app/controllers/public_recipes_controller.rb:4:in `index'
+Started GET "/public_recipes" for 127.0.0.1 at 2022-03-08 16:43:03 +0100
+Processing by PublicRecipesController#index as HTML
+  Rendering layout layouts/public_recipes.html.erb
+  Rendering public_recipes/index.html.erb within layouts/public_recipes
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."public" = $1[0m  [["public", true]]
+  ↳ app/views/public_recipes/index.html.erb:3
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/public_recipes/_public_recipe_card.html.erb:2
+  Rendered public_recipes/_public_recipe_card.html.erb (Duration: 35.2ms | Allocations: 12695)
+  Rendered public_recipes/index.html.erb within layouts/public_recipes (Duration: 43.2ms | Allocations: 15324)
+  Rendered layout layouts/public_recipes.html.erb (Duration: 43.4ms | Allocations: 15418)
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 7.4ms | Allocations: 21132)
+
+
+  
+ActionView::Template::Error (undefined method `recipe_foods' for #<Recipe id: 1, name: "milk shake", preparation_time: nil, cooking_time: nil, description: "very delicious recipe", public: true, user_id: 10, created_at: "2022-03-08 15:19:58.656514000 +0000", updated_at: "2022-03-08 15:19:58.656514000 +0000">
+Did you mean?  recipe_food
+               recipe_food=
+               recipe_food_ids):
+    1: <% title= recipe.name %>
+    2: <% owner= User.find(recipe.user_id) %>
+    3: <% foods_list = recipe.recipe_foods %>
+    4: <% total_food = foods_list.length %>
+    5: <% total_price = 0 %>
+    6: <% foods_list.each do |food| %>
+  
+app/views/public_recipes/_public_recipe_card.html.erb:3
+app/views/public_recipes/index.html.erb:4
+app/views/public_recipes/index.html.erb:3
+Started GET "/public_recipes" for 127.0.0.1 at 2022-03-08 16:44:42 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PublicRecipesController#index as HTML
+  Rendering layout layouts/public_recipes.html.erb
+  Rendering public_recipes/index.html.erb within layouts/public_recipes
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."public" = $1[0m  [["public", true]]
+  ↳ app/views/public_recipes/index.html.erb:3
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/public_recipes/_public_recipe_card.html.erb:2
+  Rendered public_recipes/_public_recipe_card.html.erb (Duration: 36.7ms | Allocations: 21436)
+  Rendered public_recipes/index.html.erb within layouts/public_recipes (Duration: 55.0ms | Allocations: 32926)
+  Rendered layout layouts/public_recipes.html.erb (Duration: 55.4ms | Allocations: 33027)
+Completed 500 Internal Server Error in 70ms (ActiveRecord: 7.5ms | Allocations: 44592)
+
+
+  
+ActionView::Template::Error (undefined method `recipe_foods' for #<Recipe id: 1, name: "milk shake", preparation_time: nil, cooking_time: nil, description: "very delicious recipe", public: true, user_id: 10, created_at: "2022-03-08 15:19:58.656514000 +0000", updated_at: "2022-03-08 15:19:58.656514000 +0000">
+Did you mean?  recipe_food
+               recipe_food=
+               recipe_food_ids):
+    1: <% title= recipe.name %>
+    2: <% owner= User.find(recipe.user_id) %>
+    3: <% foods_list = recipe.recipe_foods %>
+    4: <% total_food = foods_list.length %>
+    5: <% total_price = 0 %>
+    6: <% foods_list.each do |food| %>
+  
+app/views/public_recipes/_public_recipe_card.html.erb:3
+app/views/public_recipes/index.html.erb:4
+app/views/public_recipes/index.html.erb:3
+Started GET "/public_recipes" for 127.0.0.1 at 2022-03-08 16:44:50 +0100
+Processing by PublicRecipesController#index as HTML
+  Rendering layout layouts/public_recipes.html.erb
+  Rendering public_recipes/index.html.erb within layouts/public_recipes
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."public" = $1[0m  [["public", true]]
+  ↳ app/views/public_recipes/index.html.erb:3
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/public_recipes/_public_recipe_card.html.erb:2
+  Rendered public_recipes/_public_recipe_card.html.erb (Duration: 20.8ms | Allocations: 8729)
+  Rendered public_recipes/index.html.erb within layouts/public_recipes (Duration: 24.6ms | Allocations: 9543)
+  Rendered layout layouts/public_recipes.html.erb (Duration: 25.1ms | Allocations: 9632)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.6ms | Allocations: 9968)
+
+
+  
+ActionView::Template::Error (undefined method `recipe_foods' for #<Recipe id: 1, name: "milk shake", preparation_time: nil, cooking_time: nil, description: "very delicious recipe", public: true, user_id: 10, created_at: "2022-03-08 15:19:58.656514000 +0000", updated_at: "2022-03-08 15:19:58.656514000 +0000">
+Did you mean?  recipe_food
+               recipe_food=
+               recipe_food_ids):
+    1: <% title= recipe.name %>
+    2: <% owner= User.find(recipe.user_id) %>
+    3: <% foods_list = recipe.recipe_foods %>
+    4: <% total_food = foods_list.length %>
+    5: <% total_price = 0 %>
+    6: <% foods_list.each do |food| %>
+  
+app/views/public_recipes/_public_recipe_card.html.erb:3
+app/views/public_recipes/index.html.erb:4
+app/views/public_recipes/index.html.erb:3
+Started GET "/" for 127.0.0.1 at 2022-03-08 16:44:56 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 9.9ms | Allocations: 621)
+  Rendered layout layouts/application.html.erb (Duration: 117.7ms | Allocations: 53043)
+Completed 200 OK in 128ms (Views: 120.3ms | ActiveRecord: 0.4ms | Allocations: 55714)
+
+
+Started GET "/public_recipes" for 127.0.0.1 at 2022-03-08 16:45:00 +0100
+Processing by PublicRecipesController#index as HTML
+  Rendering layout layouts/public_recipes.html.erb
+  Rendering public_recipes/index.html.erb within layouts/public_recipes
+  [1m[36mRecipe Load (0.6ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."public" = $1[0m  [["public", true]]
+  ↳ app/views/public_recipes/index.html.erb:3
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/public_recipes/_public_recipe_card.html.erb:2
+  Rendered public_recipes/_public_recipe_card.html.erb (Duration: 24.0ms | Allocations: 8727)
+  Rendered public_recipes/index.html.erb within layouts/public_recipes (Duration: 30.3ms | Allocations: 9544)
+  Rendered layout layouts/public_recipes.html.erb (Duration: 32.3ms | Allocations: 9633)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 1.1ms | Allocations: 9957)
+
+
+  
+ActionView::Template::Error (undefined method `recipe_foods' for #<Recipe id: 1, name: "milk shake", preparation_time: nil, cooking_time: nil, description: "very delicious recipe", public: true, user_id: 10, created_at: "2022-03-08 15:19:58.656514000 +0000", updated_at: "2022-03-08 15:19:58.656514000 +0000">
+Did you mean?  recipe_food
+               recipe_food=
+               recipe_food_ids):
+    1: <% title= recipe.name %>
+    2: <% owner= User.find(recipe.user_id) %>
+    3: <% foods_list = recipe.recipe_foods %>
+    4: <% total_food = foods_list.length %>
+    5: <% total_price = 0 %>
+    6: <% foods_list.each do |food| %>
+  
+app/views/public_recipes/_public_recipe_card.html.erb:3
+app/views/public_recipes/index.html.erb:4
+app/views/public_recipes/index.html.erb:3
+Started GET "/" for 127.0.0.1 at 2022-03-08 16:50:09 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 493)
+  Rendered layout layouts/application.html.erb (Duration: 14.0ms | Allocations: 7138)
+Completed 200 OK in 21ms (Views: 16.2ms | ActiveRecord: 0.4ms | Allocations: 9250)
+
+
+Started GET "/public_recipes" for 127.0.0.1 at 2022-03-08 16:50:11 +0100
+Processing by PublicRecipesController#index as HTML
+  Rendering layout layouts/public_recipes.html.erb
+  Rendering public_recipes/index.html.erb within layouts/public_recipes
+  [1m[36mRecipe Load (0.9ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."public" = $1[0m  [["public", true]]
+  ↳ app/views/public_recipes/index.html.erb:3
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/public_recipes/_public_recipe_card.html.erb:3
+  [1m[36mRecipeFood Load (0.4ms)[0m  [1m[34mSELECT "recipe_foods".* FROM "recipe_foods" WHERE "recipe_foods"."recipe_id" = $1[0m  [["recipe_id", 1]]
+  ↳ app/views/public_recipes/_public_recipe_card.html.erb:5
+  [1m[36mFood Load (1.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public_recipes/_public_recipe_card.html.erb:8
+  [1m[36mFood Load (1.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/public_recipes/_public_recipe_card.html.erb:8
+  [1m[36mFood Load (0.8ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/public_recipes/_public_recipe_card.html.erb:8
+  Rendered public_recipes/_public_recipe_card.html.erb (Duration: 193.2ms | Allocations: 20077)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/public_recipes/_public_recipe_card.html.erb:3
+  [1m[36mRecipeFood Load (0.6ms)[0m  [1m[34mSELECT "recipe_foods".* FROM "recipe_foods" WHERE "recipe_foods"."recipe_id" = $1[0m  [["recipe_id", 2]]
+  ↳ app/views/public_recipes/_public_recipe_card.html.erb:5
+  [1m[36mCACHE Food Load (0.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/public_recipes/_public_recipe_card.html.erb:8
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public_recipes/_public_recipe_card.html.erb:8
+  Rendered public_recipes/_public_recipe_card.html.erb (Duration: 12.8ms | Allocations: 2386)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/public_recipes/_public_recipe_card.html.erb:3
+  [1m[36mRecipeFood Load (1.5ms)[0m  [1m[34mSELECT "recipe_foods".* FROM "recipe_foods" WHERE "recipe_foods"."recipe_id" = $1[0m  [["recipe_id", 3]]
+  ↳ app/views/public_recipes/_public_recipe_card.html.erb:5
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/public_recipes/_public_recipe_card.html.erb:8
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public_recipes/_public_recipe_card.html.erb:8
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public_recipes/_public_recipe_card.html.erb:8
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/public_recipes/_public_recipe_card.html.erb:8
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public_recipes/_public_recipe_card.html.erb:8
+  Rendered public_recipes/_public_recipe_card.html.erb (Duration: 15.5ms | Allocations: 3740)
+  Rendered public_recipes/index.html.erb within layouts/public_recipes (Duration: 231.7ms | Allocations: 27516)
+  Rendered layout layouts/public_recipes.html.erb (Duration: 250.3ms | Allocations: 34281)
+Completed 200 OK in 257ms (Views: 228.9ms | ActiveRecord: 26.4ms | Allocations: 35308)
+
+
