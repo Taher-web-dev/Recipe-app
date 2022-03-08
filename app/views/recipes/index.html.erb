@@ -1,0 +1,14 @@
+<%= stylesheet_link_tag "recipe", "data-turbo-track": "reload" %>
+
+<div class="recipes_container">
+  <p style="color: green"><%= notice %></p>
+
+  <%= button_to "New recipe", new_recipe_path, :method => :get %>
+
+  <div id="recipes">
+    <% @recipes.each do |recipe| %>
+      <%= render recipe %>
+    <% end %>
+  </div>
+
+</div>

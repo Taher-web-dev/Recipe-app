@@ -1,0 +1,33 @@
+<%= stylesheet_link_tag "food", "data-turbo-track": "reload" %>
+
+<div class="food_container">
+  <p style="color: green"><%= notice %></p>
+
+  <%= button_to "Add Food", new_user_food_path(user_id: current_user.id), :method => :get %>
+
+  <% if @foods.length > 0%>
+    <table id="foods" border="1">
+      <tr>
+        <th>
+          Food
+        </th>
+        <th>
+          Measurement Unit
+        </th>
+        <th>
+          Unit Price
+        </th>
+        <th>
+          Actions
+        </th>
+      </tr>
+
+      <% @foods.each do |food| %>
+        <%= render food %>
+      <% end %>
+    </div>
+  <% else %>
+    <h3>No Food To Show</h3>
+  <%end%>
+
+</div>

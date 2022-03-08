@@ -1,0 +1,66 @@
+.recipes_container {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 50px;
+}
+
+.recipes_container form {
+  align-self: flex-end;
+}
+
+.recipes_container #recipes {
+  width: 60%;
+}
+
+.recipes_container #recipes > div {
+  display: flex;
+  gap: 20px;
+  border: 1px solid black;
+  height: 100px;
+  width: 100%;
+  padding: 20px;
+}
+
+.recipes_container #recipes div div:first-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 10%;
+}
+
+.recipes_container #recipes div div:first-child button {
+  border: 0;
+  text-decoration: underline;
+  color: blue;
+}
+
+.new-recipe-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.new-recipe-container form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.new-recipe-container form input,
+.new-recipe-container form textarea {
+  width: 100%;
+}
+
+.public-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.new-recipe-container form .public-container input {
+  width: fit-content;
+}
