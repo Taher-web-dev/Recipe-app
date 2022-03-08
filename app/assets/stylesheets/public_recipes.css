@@ -6,6 +6,7 @@ body {
   margin-top: 125px;
   width: 90%;
   margin-left: 5%;
+  margin-bottom: 125px ;
 }
 .public_recipes_title {
   color: white;
@@ -16,4 +17,28 @@ body {
   padding-left: 0.5%;
   margin-left: 37.75%;
   margin-top: 5px;
+}
+
+.public-recip-card {
+  display: flex;
+  border: 1px solid #fff;
+  margin-bottom: 10px;
+  width: 90%;
+  margin-left: 5%;
+  justify-content: space-around;
+}
+
+.public-recip-general-inf {
+  display: flex;
+  flex-direction: column;
+}
+
+.public-recip-statistic-inf {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.public-recip-card p {
+  color: white;
 }

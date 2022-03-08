@@ -1,6 +1,6 @@
 <% title= recipe.name %>
 <% id = recipe.id %>
-<% owner= User.find(recipe.user_id) %>
+<% owner= User.find(recipe.user_id).name %>
 <% foods_list = RecipeFood.where(recipe_id: id) %>
 <% total_food = foods_list.length %>
 <% total_price = 0 %>
