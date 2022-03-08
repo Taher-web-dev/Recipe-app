@@ -12946,3 +12946,17 @@ FOREIGN KEY ("recipe_id")
   [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.9ms)[0m  [1m[34mSELECT pg_advisory_unlock(5710058475801362025)[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFood Create (109.3ms)[0m  [1m[32mINSERT INTO "foods" ("name", "measurement_unit", "price", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "ckicken"], ["measurement_unit", "g"], ["price", "1.0"], ["user_id", 10], ["created_at", "2022-03-08 13:43:14.951249"], ["updated_at", "2022-03-08 13:43:14.951249"]]
+  [1m[36mTRANSACTION (29.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFood Create (0.6ms)[0m  [1m[32mINSERT INTO "foods" ("name", "measurement_unit", "price", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "tasty meat"], ["measurement_unit", "g"], ["price", "2.5"], ["user_id", 11], ["created_at", "2022-03-08 13:45:30.639243"], ["updated_at", "2022-03-08 13:45:30.639243"]]
+  [1m[36mTRANSACTION (17.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFood Create (1.2ms)[0m  [1m[32mINSERT INTO "foods" ("name", "measurement_unit", "price", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "apple"], ["measurement_unit", "g"], ["price", "0.25"], ["user_id", 11], ["created_at", "2022-03-08 13:47:44.354866"], ["updated_at", "2022-03-08 13:47:44.354866"]]
+  [1m[36mTRANSACTION (1053.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFood Create (7.2ms)[0m  [1m[32mINSERT INTO "foods" ("name", "measurement_unit", "price", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "banana"], ["measurement_unit", "g"], ["price", "0.4"], ["user_id", 11], ["created_at", "2022-03-08 13:50:12.730944"], ["updated_at", "2022-03-08 13:50:12.730944"]]
+  [1m[36mTRANSACTION (19.2ms)[0m  [1m[35mCOMMIT[0m
