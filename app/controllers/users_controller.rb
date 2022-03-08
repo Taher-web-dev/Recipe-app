@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
   def index
-    render "devise/sessions/new"
+    if !current_user
+      render "devise/sessions/new"
+    end
   end
 end
