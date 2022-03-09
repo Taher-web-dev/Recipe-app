@@ -120,9 +120,19 @@ table {
   margin-left: 17.5%;
   border: 2px solid rgb(92, 99, 106);
   border-collapse: collapse;
+  margin-bottom: 300px;
 }
 
 th,td {
   border-right: 2px solid rgb(92, 99, 106);
   text-align: center;
+}
+
+body {
+  position: relative;
+  overflow: scroll;
+}
+
+.colored {
+  background-color: rgb(238,230,230);
 }

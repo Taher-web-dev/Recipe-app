@@ -1,5 +1,6 @@
 <%= stylesheet_link_tag "recipe", "data-turbo-track": "reload" %>
-
+<% classes_row = ["colored", "natural"] %>
+<% i = 0 %>
 <img class ="icone-recipe" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOWry5OIVtLKR-JVVI4cjFYMPJm5sSFNOF4w&usqp=CAU" />
 
 <h1 class="recipe-title"> <%= @recipe.name %> </h1>
@@ -28,15 +29,23 @@
       <th>Actions</th>
     </tr>
   </thead>
-  <tfoot>
-    <tr>
-      <th>Food</th>
-      <th>Quantity </th>
-      <th>Value </th>
-      <th>Actions</th>
-    </tr>
-  </tfoot>
+  
   <tbody>
+    <% @recipe_foods.each do |recipe_food| %>
+        <% food_idd = recipe_food.food_id %>
+        <% food = Food.find(food_idd) %>
+        <% value = recipe_food.quantity * food.price %>
+        <tr class=<%= classes_row[i%2] %> >
+          <td> <%= Food.find(food_idd).name %> </td>
+          <td> <%= recipe_food.quantity %><%= food.measurement_unit %> </td>
+          <td> <%=  value %>$ </td>
+          <td> 
+            <%= link_to "Modify","/foods"  %>
+            <%= link_to "Remove", controller: "foods", action: "destroy",user_id: current_user.id, id: food_idd, method: :delete %>
+          </td>
+        </tr>
+        <% i += 1 %>
+    <% end %>
   </tbody>
 </table>
 
