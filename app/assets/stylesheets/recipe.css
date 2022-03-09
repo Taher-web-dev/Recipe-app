@@ -106,9 +106,6 @@ input[name="public"] {
   justify-content: space-around;
 }
 
-.btn {
-  width: 20%;
-}
 
 hr {
 
@@ -117,3 +114,4 @@ hr {
   margin-left: 17.5%;
   border: solid 1px;
 }
+
