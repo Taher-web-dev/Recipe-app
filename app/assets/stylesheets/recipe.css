@@ -115,3 +115,14 @@ hr {
   border: solid 1px;
 }
 
+table {
+  width:65%;
+  margin-left: 17.5%;
+  border: 2px solid rgb(92, 99, 106);
+  border-collapse: collapse;
+}
+
+th,td {
+  border-right: 2px solid rgb(92, 99, 106);
+  text-align: center;
+}
