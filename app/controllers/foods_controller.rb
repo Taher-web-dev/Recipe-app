@@ -3,7 +3,7 @@ class FoodsController < ApplicationController
 
   # GET /foods or /foods.json
   def index
-    @foods = Food.where(user_id: params[:user_id])
+    @foods = Food.where(user_id: current_user.id)
   end
 
   # GET /foods/new
@@ -17,7 +17,7 @@ class FoodsController < ApplicationController
     @food.user_id = current_user.id
 
     if @food.save
-      redirect_to "/users/#{current_user.id}/foods/"
+      redirect_to '/foods/'
     else
       render :new, alert: 'Sorry something went wrong'
     end
@@ -27,7 +27,7 @@ class FoodsController < ApplicationController
   def destroy
     food = Food.find(params[:id])
     food.destroy
-    redirect_to "/users/#{current_user.id}/foods/"
+    redirect_to '/foods/'
   end
 
   private

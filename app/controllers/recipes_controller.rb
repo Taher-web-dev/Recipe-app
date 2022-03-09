@@ -3,7 +3,7 @@ class RecipesController < ApplicationController
 
   # GET /recipes or /recipes.json
   def index
-    @recipes = Recipe.where(user_id: params[:user_id])
+    @recipes = Recipe.where(user_id: current_user.id)
   end
 
   # GET /recipes/1 or /recipes/1.json
@@ -23,7 +23,7 @@ class RecipesController < ApplicationController
     @recipe.user_id = current_user.id
 
     if @recipe.save
-      redirect_to "/users/#{current_user.id}/recipes/"
+      redirect_to '/recipes/'
     else
       render :new, alert: 'Sorry something went wrong'
     end
@@ -35,7 +35,7 @@ class RecipesController < ApplicationController
   # DELETE /recipes/1 or /recipes/1.json
   def destroy
     @recipe.destroy
-    redirect_to "/users/#{current_user.id}/recipes/"
+    redirect_to '/recipes/'
   end
 
   private
