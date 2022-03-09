@@ -64,3 +64,56 @@
 .new-recipe-container form .public-container input {
   width: fit-content;
 }
+
+.icone-recipe {
+  margin-left: 40%;
+  margin-top: 0;
+}
+
+.recip-general-info {
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  margin-left: 5%;
+}
+
+.recipe-title {
+  margin-left: 45%;
+  margin-bottom: 40px;
+}
+
+.recip-process {
+  display: flex;
+  flex-direction: column;
+}
+
+.recip-process p {
+  font-weight: 700;
+}
+
+.public-state {
+  font-weight: 700;
+}
+
+input[name="public"] {
+  width : 40px;
+}
+
+.generating-btn {
+  display: flex;
+  width: 90%;
+  margin-left: 5%;
+  justify-content: space-around;
+}
+
+.btn {
+  width: 20%;
+}
+
+hr {
+
+  height: 10px;
+  width: 65%;
+  margin-left: 17.5%;
+  border: solid 1px;
+}

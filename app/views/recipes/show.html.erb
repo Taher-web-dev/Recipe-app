@@ -1,10 +1,21 @@
-<p style="color: green"><%= notice %></p>
+<%= stylesheet_link_tag "recipe", "data-turbo-track": "reload" %>
 
-<%= render @recipe %>
+<img class ="icone-recipe" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOWry5OIVtLKR-JVVI4cjFYMPJm5sSFNOF4w&usqp=CAU" />
 
-<div>
-  <%= link_to "Edit this recipe", edit_recipe_path(@recipe) %> |
-  <%= link_to "Back to recipes", recipes_path %>
-
-  <%= button_to "Destroy this recipe", @recipe, method: :delete %>
+<h1 class="recipe-title"> <%= @recipe.name %> </h1>
+<div class="recip-general-info">
+  <div class="recip-process">
+    <p>Preparation time: <%= @recipe.preparation_time %> </p>
+    <p>Cooking time: <%= @recipe.cooking_time %> </p>
+    <p> Steps go here... </p>
+  </div>
+  <div class="public-state">
+    <label for="public"> Public</label>
+    <input type="range" name="public"  min=0 max=1 value=<%= @recipe.public %> disabled>
+  </div>
 </div>
+<div class="generating-btn" >
+  <button type="button" class="btn btn-secondary">Generate shopping list</button>
+  <button type="button" class="btn btn-secondary">Add ingredient</button>
+</div>
+<hr/>
