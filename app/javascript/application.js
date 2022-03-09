@@ -5,3 +5,6 @@ import "controllers"
 //import "bootstrap"
 import * as bootstrap from "bootstrap"
 //import "popper"
+
+//= require jquery
+//= require jquery_ujs
