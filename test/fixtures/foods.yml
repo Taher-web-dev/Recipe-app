@@ -3,11 +3,19 @@
 one:
   name: MyString
   measurement_unit: MyString
+<<<<<<< HEAD
   price: 1.5
+=======
+  price: 9.99
+>>>>>>> public_recipes
   user: one
 
 two:
   name: MyString
   measurement_unit: MyString
+<<<<<<< HEAD
   price: 1.5
+=======
+  price: 9.99
+>>>>>>> public_recipes
   user: two

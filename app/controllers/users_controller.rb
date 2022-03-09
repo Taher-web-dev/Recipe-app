@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
   def index
-    render 'devise/sessions/new'
+    render 'devise/sessions/new' unless current_user
   end
 end
