@@ -16302,3 +16302,50 @@ Processing by PublicRecipesController#index as HTML
 Completed 200 OK in 133ms (Views: 126.6ms | ActiveRecord: 2.9ms | Allocations: 18788)
 
 
+Started GET "/public_recipes" for 127.0.0.1 at 2022-03-09 09:00:46 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (47.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PublicRecipesController#index as HTML
+  Rendering layout layouts/public_recipes.html.erb
+  Rendering public_recipes/index.html.erb within layouts/public_recipes
+  [1m[36mRecipe Load (12.6ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."public" = $1 ORDER BY "recipes"."created_at" DESC[0m  [["public", true]]
+  ↳ app/views/public_recipes/index.html.erb:8
+  [1m[36mUser Load (26.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/public_recipes/_public_recipe_card.html.erb:3
+  [1m[36mRecipeFood Load (2.9ms)[0m  [1m[34mSELECT "recipe_foods".* FROM "recipe_foods" WHERE "recipe_foods"."recipe_id" = $1[0m  [["recipe_id", 3]]
+  ↳ app/views/public_recipes/_public_recipe_card.html.erb:5
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/public_recipes/_public_recipe_card.html.erb:8
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public_recipes/_public_recipe_card.html.erb:8
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public_recipes/_public_recipe_card.html.erb:8
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/public_recipes/_public_recipe_card.html.erb:8
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public_recipes/_public_recipe_card.html.erb:8
+  Rendered public_recipes/_public_recipe_card.html.erb (Duration: 303.1ms | Allocations: 30401)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/public_recipes/_public_recipe_card.html.erb:3
+  [1m[36mRecipeFood Load (0.4ms)[0m  [1m[34mSELECT "recipe_foods".* FROM "recipe_foods" WHERE "recipe_foods"."recipe_id" = $1[0m  [["recipe_id", 2]]
+  ↳ app/views/public_recipes/_public_recipe_card.html.erb:5
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/public_recipes/_public_recipe_card.html.erb:8
+  [1m[36mCACHE Food Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/public_recipes/_public_recipe_card.html.erb:8
+  Rendered public_recipes/_public_recipe_card.html.erb (Duration: 9.7ms | Allocations: 2289)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/public_recipes/_public_recipe_card.html.erb:3
+  [1m[36mRecipeFood Load (1.4ms)[0m  [1m[34mSELECT "recipe_foods".* FROM "recipe_foods" WHERE "recipe_foods"."recipe_id" = $1[0m  [["recipe_id", 1]]
+  ↳ app/views/public_recipes/_public_recipe_card.html.erb:5
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public_recipes/_public_recipe_card.html.erb:8
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/public_recipes/_public_recipe_card.html.erb:8
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/public_recipes/_public_recipe_card.html.erb:8
+  Rendered public_recipes/_public_recipe_card.html.erb (Duration: 16.4ms | Allocations: 2801)
+  Rendered public_recipes/index.html.erb within layouts/public_recipes (Duration: 510.7ms | Allocations: 47086)
+  Rendered layout layouts/public_recipes.html.erb (Duration: 1937.2ms | Allocations: 117263)
+Completed 200 OK in 2034ms (Views: 1790.8ms | ActiveRecord: 155.0ms | Allocations: 128955)
+
+
