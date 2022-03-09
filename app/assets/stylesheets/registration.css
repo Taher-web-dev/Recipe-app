@@ -1,4 +1,5 @@
-body { height: 100vh}
+body { height: 100vh; }
+
 .sign_up-form {
   width: 60%;
   margin-left: 20%;
@@ -11,14 +12,17 @@ body { height: 100vh}
 
 .sign-btn {
   margin-top: 30px;
-  width : 100%;
+  width: 100%;
   padding: 5px 0;
-  /*background-color: rgb(32, 112, 173);*/
-  /*background-color: rgb(247,213,97);*/
+
+  /* background-color: rgb(32, 112, 173); */
+
+  /* background-color: rgb(247,213,97); */
   background-color: rgb(247, 165, 100);
   color: white;
-  /*border: 2px solid rgb(247,213,97);*/
-  border: rgb(247, 165, 100) ;
+
+  /* border: 2px solid rgb(247,213,97); */
+  border: rgb(247, 165, 100);
   font-weight: 700;
 }
 
@@ -36,7 +40,7 @@ body { height: 100vh}
 
 .sign-in-new {
   grid-column: 2/ span 1;
-  background-color: rgb(247,213,97);
+  background-color: rgb(247, 213, 97);
 }
 
 .sign-in-email {
@@ -73,7 +77,7 @@ body { height: 100vh}
   margin-left: 30%;
 }
 
-.greeting-sign-in{
+.greeting-sign-in {
   margin-left: 40%;
   margin-top: 150px;
   color: white;
@@ -85,18 +89,20 @@ body { height: 100vh}
   color: white;
 }
 
- .sign-in-links a{
+.sign-in-links a {
   color: white;
   margin-left: 40%;
   background-color: rgb(247, 165, 100);
   text-decoration: none;
 }
+
 .sign-up-links {
   margin-top: 10px;
   border: rgb(32, 112, 173);
   margin-left: 40%;
 }
-.sign-up-links a{
+
+.sign-up-links a {
   color: white;
   background-color: rgb(32, 112, 173);
   text-decoration: none;
@@ -120,7 +126,7 @@ body { height: 100vh}
 
 .left-side {
   grid-column: 1 / span 1;
-  background-color: rgb(78,57,76);
+  background-color: rgb(78, 57, 76);
 }
 
 .welcome-side {
@@ -153,6 +159,7 @@ body { height: 100vh}
   color: white;
   text-decoration: none;
 }
-.link-btn:hover{
+
+.link-btn:hover {
   color: white;
 }
