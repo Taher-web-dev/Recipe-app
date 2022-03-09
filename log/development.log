@@ -16349,3 +16349,80 @@ Processing by PublicRecipesController#index as HTML
 Completed 200 OK in 2034ms (Views: 1790.8ms | ActiveRecord: 155.0ms | Allocations: 128955)
 
 
+Started GET "/" for 127.0.0.1 at 2022-03-09 09:02:35 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 11.8ms | Allocations: 567)
+  Rendered layout layouts/application.html.erb (Duration: 38.9ms | Allocations: 7135)
+Completed 200 OK in 49ms (Views: 42.0ms | ActiveRecord: 0.3ms | Allocations: 9803)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-09 09:05:29 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 496)
+  Rendered layout layouts/application.html.erb (Duration: 1924.8ms | Allocations: 9994)
+Completed 200 OK in 1957ms (Views: 1934.6ms | ActiveRecord: 1.7ms | Allocations: 12333)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-09 09:06:02 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 498)
+  Rendered layout layouts/application.html.erb (Duration: 434.3ms | Allocations: 9784)
+Completed 200 OK in 474ms (Views: 443.8ms | ActiveRecord: 1.2ms | Allocations: 12079)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-09 09:06:38 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 142)
+  Rendered layout layouts/application.html.erb (Duration: 435.0ms | Allocations: 8593)
+Completed 200 OK in 461ms (Views: 437.1ms | ActiveRecord: 2.7ms | Allocations: 10009)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-09 09:10:33 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 497)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 7041)
+Completed 200 OK in 16ms (Views: 11.3ms | ActiveRecord: 0.4ms | Allocations: 9129)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-09 09:11:28 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 142)
+  Rendered layout layouts/application.html.erb (Duration: 387.0ms | Allocations: 8709)
+Completed 200 OK in 399ms (Views: 387.7ms | ActiveRecord: 1.1ms | Allocations: 10116)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-09 09:12:21 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 142)
+  Rendered layout layouts/application.html.erb (Duration: 496.3ms | Allocations: 8688)
+Completed 200 OK in 502ms (Views: 496.9ms | ActiveRecord: 0.3ms | Allocations: 9930)
+
+

@@ -148,3 +148,11 @@ body { height: 100vh}
 .btn-success {
   text-decoration: none;
 }
+
+.link-btn {
+  color: white;
+  text-decoration: none;
+}
+.link-btn:hover{
+  color: white;
+}
