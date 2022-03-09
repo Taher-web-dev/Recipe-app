@@ -7,7 +7,11 @@ class RecipesController < ApplicationController
   end
 
   # GET /recipes/1 or /recipes/1.json
-  def show; end
+  def show
+    recipe_id = params[:id]
+    @recipe = Recipe.find(recipe_id)
+    render recipes_path unless ((@recipe.public == true) || (@recipe.user_id == current_user.id)) 
+  end
 
   # GET /recipes/new
   def new
