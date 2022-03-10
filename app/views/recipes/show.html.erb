@@ -1,6 +1,10 @@
 <%= stylesheet_link_tag "recipe", "data-turbo-track": "reload" %>
 <% classes_row = ["colored", "natural"] %>
 <% i = 0 %>
+<% disable = true %>
+<% if @recipe.user_id == current_user.id %>
+  <% disable = false %>
+<% end %>
 <img class ="icone-recipe" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOWry5OIVtLKR-JVVI4cjFYMPJm5sSFNOF4w&usqp=CAU" />
 
 <h1 class="recipe-title"> <%= @recipe.name %> </h1>
@@ -17,7 +21,7 @@
 </div>
 <div class="generating-btn" >
   <%= button_to "Generate shopping list","/general_shopping_list" ,class:"btn btn-secondary", method: :get %>
-  <%= button_to  "Add ingredient",new_user_food_path(user_id: current_user.id), class:"btn btn-secondary", method: :get %>
+  <%= button_to  "Add ingredient",new_user_food_path(user_id: current_user.id), class:"btn btn-secondary", method: :get, disabled: disable %>
 </div>
 <hr/>
 <table>

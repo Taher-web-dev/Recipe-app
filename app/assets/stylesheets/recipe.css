@@ -96,7 +96,7 @@
 }
 
 input[name="public"] {
-  width : 40px;
+  width: 40px;
 }
 
 .generating-btn {
@@ -106,9 +106,7 @@ input[name="public"] {
   justify-content: space-around;
 }
 
-
 hr {
-
   height: 10px;
   width: 65%;
   margin-left: 17.5%;
@@ -116,14 +114,15 @@ hr {
 }
 
 table {
-  width:65%;
+  width: 65%;
   margin-left: 17.5%;
   border: 2px solid rgb(92, 99, 106);
   border-collapse: collapse;
   margin-bottom: 300px;
 }
 
-th,td {
+th,
+td {
   border-right: 2px solid rgb(92, 99, 106);
   text-align: center;
 }
@@ -134,5 +133,5 @@ body {
 }
 
 .colored {
-  background-color: rgb(238,230,230);
+  background-color: rgb(238, 230, 230);
 }
