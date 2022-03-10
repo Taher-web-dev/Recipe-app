@@ -31,3 +31,6 @@
 /config/master.key
 
 node_modules/
+lib/
+vendor/
+/app/assets/images/overview_ror _recadré.gif
