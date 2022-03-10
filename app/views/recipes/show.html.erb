@@ -5,7 +5,11 @@
 <% if @recipe.user_id == current_user.id %>
   <% disable = false %>
 <% end %>
+<a href='/' class="home-link" style="margin-left: 5%"> 
+  <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Tokyoship_Home_icon.svg" alt="home-link" width="50px" />
+</a>
 <img class ="icone-recipe" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOWry5OIVtLKR-JVVI4cjFYMPJm5sSFNOF4w&usqp=CAU" />
+
 
 <h1 class="recipe-title"> <%= @recipe.name %> </h1>
 <div class="recip-general-info">
@@ -53,9 +57,4 @@
   </tbody>
 </table>
 
-<div>
-  <%= link_to "Edit this recipe", edit_recipe_path(@recipe) %> |
-  <%= link_to "Back to recipes", recipes_path %>
 
-  <%= button_to "Destroy this recipe", @recipe, method: :delete %>
-</div>

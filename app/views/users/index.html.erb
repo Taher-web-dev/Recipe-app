@@ -3,7 +3,11 @@
   <div class= "left-side">
     <div class="home-menu-links">
       <button  class="btn btn-success btn-lg" %><a href="/public_recipes" class="link-btn ">Public recipes</a></button>
+      <button  class="btn btn-success btn-lg" %><a href="/recipes" class="link-btn ">Recipes List</a></button>
+      <button  class="btn btn-success btn-lg" %><a href="/foods" class="link-btn ">Food List</a></button>
+      <%= button_to 'Edit Account', edit_user_registration_path,method: :get, class:"btn btn-warning btn-lg" %>
       <%= button_to 'Logout', destroy_user_session_path,method: :delete, class:"btn btn-danger btn-lg" %>
+      
     </div>
   </div>
   <div class="welcome-side">

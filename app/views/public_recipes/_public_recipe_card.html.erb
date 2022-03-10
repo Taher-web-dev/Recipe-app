@@ -9,7 +9,7 @@
   <% current_price = food_item.price * food.quantity %>
   <% total_price += current_price %>
 <% end %>
-<a href="/recipes/<%= id %>" class="recip-card-link">
+<a href="/users/<%= current_user.id %>/recipes/<%= id %>" class="recip-card-link">
 <div class="public-recip-card">
   <div class="public-recip-general-inf">
     <p> <%= title %> </p>
