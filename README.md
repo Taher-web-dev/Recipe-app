@@ -58,10 +58,6 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- A big thanks to my coding partners for the help and for Microverse team.
 
-## 📝 License
 
-This project is [MIT](https://www.mit.edu/) licensed.
