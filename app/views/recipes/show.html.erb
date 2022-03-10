@@ -1,10 +1,51 @@
-<p style="color: green"><%= notice %></p>
+<%= stylesheet_link_tag "recipe", "data-turbo-track": "reload" %>
+<% classes_row = ["colored", "natural"] %>
+<% i = 0 %>
+<img class ="icone-recipe" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOWry5OIVtLKR-JVVI4cjFYMPJm5sSFNOF4w&usqp=CAU" />
 
-<%= render @recipe %>
-
-<div>
-  <%= link_to "Edit this recipe", edit_recipe_path(@recipe) %> |
-  <%= link_to "Back to recipes", recipes_path %>
-
-  <%= button_to "Destroy this recipe", @recipe, method: :delete %>
+<h1 class="recipe-title"> <%= @recipe.name %> </h1>
+<div class="recip-general-info">
+  <div class="recip-process">
+    <p>Preparation time: <%= @recipe.preparation_time %> </p>
+    <p>Cooking time: <%= @recipe.cooking_time %> </p>
+    <p> Steps go here... </p>
+  </div>
+  <div class="public-state">
+    <label for="public"> Public</label>
+    <input type="range" name="public"  min=0 max=1 value=<%= @recipe.public %> disabled>
+  </div>
 </div>
+<div class="generating-btn" >
+  <%= button_to "Generate shopping list","/general_shopping_list" ,class:"btn btn-secondary", method: :get %>
+  <%= button_to  "Add ingredient",new_user_food_path(user_id: current_user.id), class:"btn btn-secondary", method: :get %>
+</div>
+<hr/>
+<table>
+  <thead>
+    <tr>
+      <th>Food</th>
+      <th>Quantity </th>
+      <th>Value </th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  
+  <tbody>
+    <% @recipe_foods.each do |recipe_food| %>
+        <% food_idd = recipe_food.food_id %>
+        <% food = Food.find(food_idd) %>
+        <% value = recipe_food.quantity * food.price %>
+        <tr class=<%= classes_row[i%2] %> >
+          <td> <%= Food.find(food_idd).name %> </td>
+          <td> <%= recipe_food.quantity %><%= food.measurement_unit %> </td>
+          <td> <%=  value %>$ </td>
+          <td> 
+            <%= link_to "Modify","/foods"  %>
+            <%= link_to "Remove", controller: "foods", action: "destroy",user_id: current_user.id, id: food_idd, method: :delete %>
+          </td>
+        </tr>
+        <% i += 1 %>
+    <% end %>
+  </tbody>
+</table>
+
