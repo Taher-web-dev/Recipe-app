@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   resources :foods, only: %i[index]
   resources :recipes, only: %i[index show]
+  get "general_shopping_list/:recipe_id" => "shopping_lists#index"
 
   resources :users do
     resources :foods, only: %i[new create destroy]
