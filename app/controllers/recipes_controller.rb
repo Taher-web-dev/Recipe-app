@@ -10,7 +10,7 @@ class RecipesController < ApplicationController
   def show
     recip_id = params[:id]
     @recipe = Recipe.find(recip_id)
-    render recipes_path unless ((@recipe.public == true) || (@recipe.user_id == current_user.id))
+    render recipes_path unless (@recipe.public == true) || (@recipe.user_id == current_user.id)
     @recipe_foods = RecipeFood.where(recipe_id: recip_id)
   end
 
