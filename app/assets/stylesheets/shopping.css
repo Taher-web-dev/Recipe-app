@@ -1,0 +1,27 @@
+.title {
+  text-align: center;
+}
+
+.general-inf {
+  display: flex;
+  width: 70%;
+  margin-left: 15%;
+  justify-content: space-around;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+table {
+  border: 3px solid black;
+  width: 40%;
+  margin-left: 30%;
+}
+
+td, th {
+  border-right: 2px solid black;
+  text-align: center;
+}
+
+.home-link {
+  margin-left: 10%;
+}

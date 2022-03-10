@@ -32449,6 +32449,7 @@ Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.0ms | Allocations: 7568)
 
 
 >>>>>>> recipe_detail
+<<<<<<< HEAD
 Started GET "/" for ::1 at 2022-03-10 11:09:54 +0100
   [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 Processing by UsersController#index as HTML
@@ -33943,5 +33944,526 @@ Processing by RecipesController#show as HTML
   Rendered recipes/show.html.erb within layouts/application (Duration: 972.5ms | Allocations: 6260)
   Rendered layout layouts/application.html.erb (Duration: 980.9ms | Allocations: 12026)
 Completed 200 OK in 992ms (Views: 980.8ms | ActiveRecord: 2.0ms | Allocations: 14653)
+=======
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5710058475801362025)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateInventories (20220310130705)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1605.1ms)[0m  [1m[35mCREATE TABLE "inventories" ("id" bigserial primary key, "name" character varying, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_6642cbdd87"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (42.6ms)[0m  [1m[35mCREATE INDEX "index_inventories_on_user_id" ON "inventories" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220310130705"]]
+  [1m[36mTRANSACTION (30.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateInventoryFoods (20220310131447)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (41.5ms)[0m  [1m[35mCREATE TABLE "inventory_foods" ("id" bigserial primary key, "quantity" float, "inventory_id" bigint NOT NULL, "food_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_d946fa9427"
+FOREIGN KEY ("inventory_id")
+  REFERENCES "inventories" ("id")
+, CONSTRAINT "fk_rails_bac85223fc"
+FOREIGN KEY ("food_id")
+  REFERENCES "foods" ("id")
+)[0m
+  [1m[35m (34.2ms)[0m  [1m[35mCREATE INDEX "index_inventory_foods_on_inventory_id" ON "inventory_foods" ("inventory_id")[0m
+  [1m[35m (30.6ms)[0m  [1m[35mCREATE INDEX "index_inventory_foods_on_food_id" ON "inventory_foods" ("food_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220310131447"]]
+  [1m[36mTRANSACTION (16.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (76.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT pg_advisory_unlock(5710058475801362025)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5710058475801362025)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5710058475801362025)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5710058475801362025)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5710058475801362025)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInventory Create (4.2ms)[0m  [1m[32mINSERT INTO "inventories" ("name", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "r1"], ["user_id", 10], ["created_at", "2022-03-10 14:45:57.751454"], ["updated_at", "2022-03-10 14:45:57.751454"]]
+  [1m[36mTRANSACTION (37.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInventoryFood Create (4.0ms)[0m  [1m[32mINSERT INTO "inventory_foods" ("quantity", "inventory_id", "food_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 0.0], ["inventory_id", 1], ["food_id", 2], ["created_at", "2022-03-10 14:47:47.401118"], ["updated_at", "2022-03-10 14:47:47.401118"]]
+  [1m[36mTRANSACTION (37.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInventoryFood Create (0.6ms)[0m  [1m[32mINSERT INTO "inventory_foods" ("quantity", "inventory_id", "food_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 0.0], ["inventory_id", 1], ["food_id", 3], ["created_at", "2022-03-10 14:48:09.231107"], ["updated_at", "2022-03-10 14:48:09.231107"]]
+  [1m[36mTRANSACTION (14.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInventoryFood Create (0.8ms)[0m  [1m[32mINSERT INTO "inventory_foods" ("quantity", "inventory_id", "food_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["quantity", 0.0], ["inventory_id", 1], ["food_id", 4], ["created_at", "2022-03-10 14:48:26.194368"], ["updated_at", "2022-03-10 14:48:26.194368"]]
+  [1m[36mTRANSACTION (13.0ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/shopping_list" for ::1 at 2022-03-10 15:49:22 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ShoppingListController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = $1[0m  [["user_id", 14]]
+  ↳ app/controllers/shopping_list_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering shopping_list/index.html.erb within layouts/application
+  Rendered shopping_list/index.html.erb within layouts/application (Duration: 115.6ms | Allocations: 54327)
+  Rendered layout layouts/application.html.erb (Duration: 137.7ms | Allocations: 77471)
+Completed 200 OK in 185ms (Views: 143.2ms | ActiveRecord: 5.3ms | Allocations: 106744)
+
+
+Started GET "/shopping_list" for ::1 at 2022-03-10 15:49:32 +0100
+Processing by ShoppingListController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.8ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = $1[0m  [["user_id", 14]]
+  ↳ app/controllers/shopping_list_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering shopping_list/index.html.erb within layouts/application
+  Rendered shopping_list/index.html.erb within layouts/application (Duration: 5.9ms | Allocations: 908)
+  Rendered layout layouts/application.html.erb (Duration: 35.7ms | Allocations: 6710)
+Completed 200 OK in 65ms (Views: 40.0ms | ActiveRecord: 2.0ms | Allocations: 9223)
+
+
+Started GET "/" for ::1 at 2022-03-10 15:56:36 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 31.9ms | Allocations: 625)
+  Rendered layout layouts/application.html.erb (Duration: 54.4ms | Allocations: 6782)
+Completed 200 OK in 78ms (Views: 56.2ms | ActiveRecord: 7.9ms | Allocations: 11877)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2022-03-10 15:58:12 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 217ms (ActiveRecord: 1.3ms | Allocations: 5488)
+
+
+Started GET "/" for ::1 at 2022-03-10 15:58:12 +0100
+Processing by UsersController#index as HTML
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.0ms | Allocations: 447)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-03-10 15:58:12 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 9.3ms | Allocations: 1597)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 157.7ms | Allocations: 4473)
+  Rendered layout layouts/application.html.erb (Duration: 182.7ms | Allocations: 10619)
+Completed 200 OK in 187ms (Views: 185.1ms | ActiveRecord: 0.0ms | Allocations: 12309)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-03-10 15:58:36 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"taherhagui@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "taherhagui@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 354ms (ActiveRecord: 0.4ms | Allocations: 4753)
+
+
+Started GET "/" for ::1 at 2022-03-10 15:58:36 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 197)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 6260)
+Completed 200 OK in 12ms (Views: 8.8ms | ActiveRecord: 0.3ms | Allocations: 8152)
+
+
+Started GET "/shopping_list" for ::1 at 2022-03-10 15:58:43 +0100
+Processing by ShoppingListController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = $1[0m  [["user_id", 10]]
+  ↳ app/controllers/shopping_list_controller.rb:7:in `index'
+  [1m[36mRecipeFood Load (0.4ms)[0m  [1m[34mSELECT "recipe_foods".* FROM "recipe_foods" WHERE "recipe_foods"."recipe_id" = $1[0m  [["recipe_id", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:9:in `block in index'
+  [1m[36mInventoryFood Load (0.3ms)[0m  [1m[34mSELECT "inventory_foods".* FROM "inventory_foods" WHERE "inventory_foods"."food_id" = $1 LIMIT $2[0m  [["food_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:11:in `block (2 levels) in index'
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:14:in `block (2 levels) in index'
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:16:in `block (2 levels) in index'
+  [1m[36mInventoryFood Load (0.3ms)[0m  [1m[34mSELECT "inventory_foods".* FROM "inventory_foods" WHERE "inventory_foods"."food_id" = $1 LIMIT $2[0m  [["food_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:11:in `block (2 levels) in index'
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:14:in `block (2 levels) in index'
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:16:in `block (2 levels) in index'
+  [1m[36mRecipeFood Load (0.2ms)[0m  [1m[34mSELECT "recipe_foods".* FROM "recipe_foods" WHERE "recipe_foods"."recipe_id" = $1[0m  [["recipe_id", 2]]
+  ↳ app/controllers/shopping_list_controller.rb:9:in `block in index'
+  [1m[36mCACHE InventoryFood Load (0.0ms)[0m  [1m[34mSELECT "inventory_foods".* FROM "inventory_foods" WHERE "inventory_foods"."food_id" = $1 LIMIT $2[0m  [["food_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:11:in `block (2 levels) in index'
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:14:in `block (2 levels) in index'
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:16:in `block (2 levels) in index'
+  [1m[36mCACHE InventoryFood Load (0.0ms)[0m  [1m[34mSELECT "inventory_foods".* FROM "inventory_foods" WHERE "inventory_foods"."food_id" = $1 LIMIT $2[0m  [["food_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:11:in `block (2 levels) in index'
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:14:in `block (2 levels) in index'
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:16:in `block (2 levels) in index'
+  Rendering layout layouts/application.html.erb
+  Rendering shopping_list/index.html.erb within layouts/application
+  Rendered shopping_list/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 910)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 6713)
+Completed 200 OK in 135ms (Views: 8.8ms | ActiveRecord: 17.4ms | Allocations: 44777)
+
+
+Started GET "/shopping_list" for ::1 at 2022-03-10 15:59:59 +0100
+Processing by ShoppingListController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = $1[0m  [["user_id", 10]]
+  ↳ app/controllers/shopping_list_controller.rb:7:in `index'
+  [1m[36mRecipeFood Load (0.3ms)[0m  [1m[34mSELECT "recipe_foods".* FROM "recipe_foods" WHERE "recipe_foods"."recipe_id" = $1[0m  [["recipe_id", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:9:in `block in index'
+  [1m[36mInventoryFood Load (0.7ms)[0m  [1m[34mSELECT "inventory_foods".* FROM "inventory_foods" WHERE "inventory_foods"."food_id" = $1 LIMIT $2[0m  [["food_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:11:in `block (2 levels) in index'
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:14:in `block (2 levels) in index'
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:16:in `block (2 levels) in index'
+  [1m[36mInventoryFood Load (0.3ms)[0m  [1m[34mSELECT "inventory_foods".* FROM "inventory_foods" WHERE "inventory_foods"."food_id" = $1 LIMIT $2[0m  [["food_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:11:in `block (2 levels) in index'
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:14:in `block (2 levels) in index'
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:16:in `block (2 levels) in index'
+  [1m[36mRecipeFood Load (0.5ms)[0m  [1m[34mSELECT "recipe_foods".* FROM "recipe_foods" WHERE "recipe_foods"."recipe_id" = $1[0m  [["recipe_id", 2]]
+  ↳ app/controllers/shopping_list_controller.rb:9:in `block in index'
+  [1m[36mCACHE InventoryFood Load (0.0ms)[0m  [1m[34mSELECT "inventory_foods".* FROM "inventory_foods" WHERE "inventory_foods"."food_id" = $1 LIMIT $2[0m  [["food_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:11:in `block (2 levels) in index'
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:14:in `block (2 levels) in index'
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:16:in `block (2 levels) in index'
+  [1m[36mCACHE InventoryFood Load (0.0ms)[0m  [1m[34mSELECT "inventory_foods".* FROM "inventory_foods" WHERE "inventory_foods"."food_id" = $1 LIMIT $2[0m  [["food_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:11:in `block (2 levels) in index'
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:14:in `block (2 levels) in index'
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:16:in `block (2 levels) in index'
+  Rendering layout layouts/application.html.erb
+  Rendering shopping_list/index.html.erb within layouts/application
+  Rendered shopping_list/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1441)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 7705)
+Completed 200 OK in 37ms (Views: 10.5ms | ActiveRecord: 3.3ms | Allocations: 17655)
+
+
+Started GET "/shopping_list" for ::1 at 2022-03-10 16:00:37 +0100
+Processing by ShoppingListController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = $1[0m  [["user_id", 10]]
+  ↳ app/controllers/shopping_list_controller.rb:7:in `index'
+  [1m[36mRecipeFood Load (0.3ms)[0m  [1m[34mSELECT "recipe_foods".* FROM "recipe_foods" WHERE "recipe_foods"."recipe_id" = $1[0m  [["recipe_id", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:9:in `block in index'
+  [1m[36mInventoryFood Load (0.3ms)[0m  [1m[34mSELECT "inventory_foods".* FROM "inventory_foods" WHERE "inventory_foods"."food_id" = $1 LIMIT $2[0m  [["food_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:11:in `block (2 levels) in index'
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:14:in `block (2 levels) in index'
+  [1m[36mCACHE Food Load (0.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:16:in `block (2 levels) in index'
+  [1m[36mInventoryFood Load (0.3ms)[0m  [1m[34mSELECT "inventory_foods".* FROM "inventory_foods" WHERE "inventory_foods"."food_id" = $1 LIMIT $2[0m  [["food_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:11:in `block (2 levels) in index'
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:14:in `block (2 levels) in index'
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:16:in `block (2 levels) in index'
+  [1m[36mRecipeFood Load (0.2ms)[0m  [1m[34mSELECT "recipe_foods".* FROM "recipe_foods" WHERE "recipe_foods"."recipe_id" = $1[0m  [["recipe_id", 2]]
+  ↳ app/controllers/shopping_list_controller.rb:9:in `block in index'
+  [1m[36mCACHE InventoryFood Load (0.0ms)[0m  [1m[34mSELECT "inventory_foods".* FROM "inventory_foods" WHERE "inventory_foods"."food_id" = $1 LIMIT $2[0m  [["food_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:11:in `block (2 levels) in index'
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:14:in `block (2 levels) in index'
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:16:in `block (2 levels) in index'
+  [1m[36mCACHE InventoryFood Load (0.0ms)[0m  [1m[34mSELECT "inventory_foods".* FROM "inventory_foods" WHERE "inventory_foods"."food_id" = $1 LIMIT $2[0m  [["food_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:11:in `block (2 levels) in index'
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:14:in `block (2 levels) in index'
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:16:in `block (2 levels) in index'
+  Rendering layout layouts/application.html.erb
+  Rendering shopping_list/index.html.erb within layouts/application
+  Rendered shopping_list/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1437)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 7699)
+Completed 200 OK in 36ms (Views: 10.1ms | ActiveRecord: 2.5ms | Allocations: 17728)
+
+
+Started GET "/" for ::1 at 2022-03-10 16:02:00 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 514)
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 6666)
+Completed 200 OK in 20ms (Views: 15.4ms | ActiveRecord: 0.2ms | Allocations: 9219)
+
+
+Started GET "/shopping_list" for ::1 at 2022-03-10 16:02:28 +0100
+Processing by ShoppingListController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = $1[0m  [["user_id", 10]]
+  ↳ app/controllers/shopping_list_controller.rb:7:in `index'
+  [1m[36mRecipeFood Load (0.2ms)[0m  [1m[34mSELECT "recipe_foods".* FROM "recipe_foods" WHERE "recipe_foods"."recipe_id" = $1[0m  [["recipe_id", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:9:in `block in index'
+  [1m[36mInventoryFood Load (0.5ms)[0m  [1m[34mSELECT "inventory_foods".* FROM "inventory_foods" WHERE "inventory_foods"."food_id" = $1 LIMIT $2[0m  [["food_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:11:in `block (2 levels) in index'
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:14:in `block (2 levels) in index'
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:16:in `block (2 levels) in index'
+  [1m[36mInventoryFood Load (0.2ms)[0m  [1m[34mSELECT "inventory_foods".* FROM "inventory_foods" WHERE "inventory_foods"."food_id" = $1 LIMIT $2[0m  [["food_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:11:in `block (2 levels) in index'
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:14:in `block (2 levels) in index'
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:16:in `block (2 levels) in index'
+  [1m[36mRecipeFood Load (0.2ms)[0m  [1m[34mSELECT "recipe_foods".* FROM "recipe_foods" WHERE "recipe_foods"."recipe_id" = $1[0m  [["recipe_id", 2]]
+  ↳ app/controllers/shopping_list_controller.rb:9:in `block in index'
+  [1m[36mCACHE InventoryFood Load (0.0ms)[0m  [1m[34mSELECT "inventory_foods".* FROM "inventory_foods" WHERE "inventory_foods"."food_id" = $1 LIMIT $2[0m  [["food_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:11:in `block (2 levels) in index'
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:14:in `block (2 levels) in index'
+  [1m[36mCACHE Food Load (0.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:16:in `block (2 levels) in index'
+  [1m[36mCACHE InventoryFood Load (0.1ms)[0m  [1m[34mSELECT "inventory_foods".* FROM "inventory_foods" WHERE "inventory_foods"."food_id" = $1 LIMIT $2[0m  [["food_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:11:in `block (2 levels) in index'
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:14:in `block (2 levels) in index'
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:16:in `block (2 levels) in index'
+  Rendering layout layouts/application.html.erb
+  Rendering shopping_list/index.html.erb within layouts/application
+  Rendered shopping_list/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 824)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 6596)
+Completed 200 OK in 46ms (Views: 14.1ms | ActiveRecord: 2.8ms | Allocations: 15715)
+
+
+Started GET "/shopping_list" for ::1 at 2022-03-10 16:05:02 +0100
+Processing by ShoppingListController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = $1[0m  [["user_id", 10]]
+  ↳ app/controllers/shopping_list_controller.rb:7:in `index'
+  [1m[36mRecipeFood Load (0.2ms)[0m  [1m[34mSELECT "recipe_foods".* FROM "recipe_foods" WHERE "recipe_foods"."recipe_id" = $1[0m  [["recipe_id", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:9:in `block in index'
+  [1m[36mInventoryFood Load (0.2ms)[0m  [1m[34mSELECT "inventory_foods".* FROM "inventory_foods" WHERE "inventory_foods"."food_id" = $1 LIMIT $2[0m  [["food_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:11:in `block (2 levels) in index'
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:14:in `block (2 levels) in index'
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:16:in `block (2 levels) in index'
+  [1m[36mInventoryFood Load (0.2ms)[0m  [1m[34mSELECT "inventory_foods".* FROM "inventory_foods" WHERE "inventory_foods"."food_id" = $1 LIMIT $2[0m  [["food_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:11:in `block (2 levels) in index'
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:14:in `block (2 levels) in index'
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:16:in `block (2 levels) in index'
+  [1m[36mRecipeFood Load (0.3ms)[0m  [1m[34mSELECT "recipe_foods".* FROM "recipe_foods" WHERE "recipe_foods"."recipe_id" = $1[0m  [["recipe_id", 2]]
+  ↳ app/controllers/shopping_list_controller.rb:9:in `block in index'
+  [1m[36mCACHE InventoryFood Load (0.0ms)[0m  [1m[34mSELECT "inventory_foods".* FROM "inventory_foods" WHERE "inventory_foods"."food_id" = $1 LIMIT $2[0m  [["food_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:11:in `block (2 levels) in index'
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:14:in `block (2 levels) in index'
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:16:in `block (2 levels) in index'
+  [1m[36mCACHE InventoryFood Load (0.0ms)[0m  [1m[34mSELECT "inventory_foods".* FROM "inventory_foods" WHERE "inventory_foods"."food_id" = $1 LIMIT $2[0m  [["food_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:11:in `block (2 levels) in index'
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:14:in `block (2 levels) in index'
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:16:in `block (2 levels) in index'
+  Rendering layout layouts/application.html.erb
+  Rendering shopping_list/index.html.erb within layouts/application
+  Rendered shopping_list/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1447)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 7709)
+Completed 200 OK in 39ms (Views: 10.3ms | ActiveRecord: 2.2ms | Allocations: 17513)
+
+
+Started GET "/shopping_list" for ::1 at 2022-03-10 16:05:33 +0100
+Processing by ShoppingListController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mRecipe Load (1.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = $1[0m  [["user_id", 10]]
+  ↳ app/controllers/shopping_list_controller.rb:7:in `index'
+  [1m[36mRecipeFood Load (0.4ms)[0m  [1m[34mSELECT "recipe_foods".* FROM "recipe_foods" WHERE "recipe_foods"."recipe_id" = $1[0m  [["recipe_id", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:9:in `block in index'
+  [1m[36mInventoryFood Load (0.5ms)[0m  [1m[34mSELECT "inventory_foods".* FROM "inventory_foods" WHERE "inventory_foods"."food_id" = $1 LIMIT $2[0m  [["food_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:11:in `block (2 levels) in index'
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:14:in `block (2 levels) in index'
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:16:in `block (2 levels) in index'
+  [1m[36mInventoryFood Load (0.4ms)[0m  [1m[34mSELECT "inventory_foods".* FROM "inventory_foods" WHERE "inventory_foods"."food_id" = $1 LIMIT $2[0m  [["food_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:11:in `block (2 levels) in index'
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:14:in `block (2 levels) in index'
+  [1m[36mCACHE Food Load (0.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:16:in `block (2 levels) in index'
+  [1m[36mRecipeFood Load (0.3ms)[0m  [1m[34mSELECT "recipe_foods".* FROM "recipe_foods" WHERE "recipe_foods"."recipe_id" = $1[0m  [["recipe_id", 2]]
+  ↳ app/controllers/shopping_list_controller.rb:9:in `block in index'
+  [1m[36mCACHE InventoryFood Load (0.0ms)[0m  [1m[34mSELECT "inventory_foods".* FROM "inventory_foods" WHERE "inventory_foods"."food_id" = $1 LIMIT $2[0m  [["food_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:11:in `block (2 levels) in index'
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:14:in `block (2 levels) in index'
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:16:in `block (2 levels) in index'
+  [1m[36mCACHE InventoryFood Load (0.0ms)[0m  [1m[34mSELECT "inventory_foods".* FROM "inventory_foods" WHERE "inventory_foods"."food_id" = $1 LIMIT $2[0m  [["food_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:11:in `block (2 levels) in index'
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:14:in `block (2 levels) in index'
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:16:in `block (2 levels) in index'
+  Rendering layout layouts/application.html.erb
+  Rendering shopping_list/index.html.erb within layouts/application
+  Rendered shopping_list/index.html.erb within layouts/application (Duration: 893.4ms | Allocations: 3526)
+  Rendered layout layouts/application.html.erb (Duration: 918.6ms | Allocations: 9395)
+Completed 200 OK in 982ms (Views: 919.6ms | ActiveRecord: 4.7ms | Allocations: 18514)
+
+
+Started GET "/shopping_list" for ::1 at 2022-03-10 16:05:47 +0100
+Processing by ShoppingListController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = $1[0m  [["user_id", 10]]
+  ↳ app/controllers/shopping_list_controller.rb:7:in `index'
+  [1m[36mRecipeFood Load (0.2ms)[0m  [1m[34mSELECT "recipe_foods".* FROM "recipe_foods" WHERE "recipe_foods"."recipe_id" = $1[0m  [["recipe_id", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:9:in `block in index'
+  [1m[36mInventoryFood Load (0.5ms)[0m  [1m[34mSELECT "inventory_foods".* FROM "inventory_foods" WHERE "inventory_foods"."food_id" = $1 LIMIT $2[0m  [["food_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:11:in `block (2 levels) in index'
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:14:in `block (2 levels) in index'
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:16:in `block (2 levels) in index'
+  [1m[36mInventoryFood Load (0.2ms)[0m  [1m[34mSELECT "inventory_foods".* FROM "inventory_foods" WHERE "inventory_foods"."food_id" = $1 LIMIT $2[0m  [["food_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:11:in `block (2 levels) in index'
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:14:in `block (2 levels) in index'
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:16:in `block (2 levels) in index'
+  [1m[36mRecipeFood Load (0.2ms)[0m  [1m[34mSELECT "recipe_foods".* FROM "recipe_foods" WHERE "recipe_foods"."recipe_id" = $1[0m  [["recipe_id", 2]]
+  ↳ app/controllers/shopping_list_controller.rb:9:in `block in index'
+  [1m[36mCACHE InventoryFood Load (0.0ms)[0m  [1m[34mSELECT "inventory_foods".* FROM "inventory_foods" WHERE "inventory_foods"."food_id" = $1 LIMIT $2[0m  [["food_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:11:in `block (2 levels) in index'
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:14:in `block (2 levels) in index'
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:16:in `block (2 levels) in index'
+  [1m[36mCACHE InventoryFood Load (0.0ms)[0m  [1m[34mSELECT "inventory_foods".* FROM "inventory_foods" WHERE "inventory_foods"."food_id" = $1 LIMIT $2[0m  [["food_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:11:in `block (2 levels) in index'
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:14:in `block (2 levels) in index'
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:16:in `block (2 levels) in index'
+  Rendering layout layouts/application.html.erb
+  Rendering shopping_list/index.html.erb within layouts/application
+  Rendered shopping_list/index.html.erb within layouts/application (Duration: 339.8ms | Allocations: 3197)
+  Rendered layout layouts/application.html.erb (Duration: 346.2ms | Allocations: 9066)
+Completed 200 OK in 376ms (Views: 346.8ms | ActiveRecord: 2.9ms | Allocations: 17983)
+
+
+Started GET "/" for ::1 at 2022-03-10 16:05:50 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 519)
+  Rendered layout layouts/application.html.erb (Duration: 41.3ms | Allocations: 6672)
+Completed 200 OK in 67ms (Views: 50.1ms | ActiveRecord: 0.9ms | Allocations: 9005)
+
+
+Started GET "/" for ::1 at 2022-03-10 16:14:53 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 269)
+  Rendered layout layouts/application.html.erb (Duration: 17.1ms | Allocations: 23196)
+Completed 200 OK in 35ms (Views: 18.2ms | ActiveRecord: 4.3ms | Allocations: 33056)
+
+
+Started GET "/shopping_list" for ::1 at 2022-03-10 16:14:58 +0100
+Processing by ShoppingListController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mInventory Load (0.4ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."user_id" = $1 LIMIT $2[0m  [["user_id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:7:in `index'
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = $1[0m  [["user_id", 10]]
+  ↳ app/controllers/shopping_list_controller.rb:8:in `index'
+  [1m[36mRecipeFood Load (0.3ms)[0m  [1m[34mSELECT "recipe_foods".* FROM "recipe_foods" WHERE "recipe_foods"."recipe_id" = $1[0m  [["recipe_id", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:10:in `block in index'
+  [1m[36mInventoryFood Load (0.8ms)[0m  [1m[34mSELECT "inventory_foods".* FROM "inventory_foods" WHERE "inventory_foods"."food_id" = $1 AND "inventory_foods"."inventory_id" = $2 LIMIT $3[0m  [["food_id", 2], ["inventory_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:12:in `block (2 levels) in index'
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:15:in `block (2 levels) in index'
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:17:in `block (2 levels) in index'
+  [1m[36mInventoryFood Load (0.5ms)[0m  [1m[34mSELECT "inventory_foods".* FROM "inventory_foods" WHERE "inventory_foods"."food_id" = $1 AND "inventory_foods"."inventory_id" = $2 LIMIT $3[0m  [["food_id", 3], ["inventory_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:12:in `block (2 levels) in index'
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:15:in `block (2 levels) in index'
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:17:in `block (2 levels) in index'
+  [1m[36mRecipeFood Load (0.7ms)[0m  [1m[34mSELECT "recipe_foods".* FROM "recipe_foods" WHERE "recipe_foods"."recipe_id" = $1[0m  [["recipe_id", 2]]
+  ↳ app/controllers/shopping_list_controller.rb:10:in `block in index'
+  [1m[36mCACHE InventoryFood Load (0.0ms)[0m  [1m[34mSELECT "inventory_foods".* FROM "inventory_foods" WHERE "inventory_foods"."food_id" = $1 AND "inventory_foods"."inventory_id" = $2 LIMIT $3[0m  [["food_id", 3], ["inventory_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:12:in `block (2 levels) in index'
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:15:in `block (2 levels) in index'
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:17:in `block (2 levels) in index'
+  [1m[36mCACHE InventoryFood Load (0.0ms)[0m  [1m[34mSELECT "inventory_foods".* FROM "inventory_foods" WHERE "inventory_foods"."food_id" = $1 AND "inventory_foods"."inventory_id" = $2 LIMIT $3[0m  [["food_id", 2], ["inventory_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:12:in `block (2 levels) in index'
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:15:in `block (2 levels) in index'
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:17:in `block (2 levels) in index'
+  Rendering layout layouts/application.html.erb
+  Rendering shopping_list/index.html.erb within layouts/application
+  Rendered shopping_list/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 993)
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | Allocations: 6853)
+Completed 200 OK in 77ms (Views: 13.0ms | ActiveRecord: 8.1ms | Allocations: 40022)
+
+
+Started GET "/shopping_list" for ::1 at 2022-03-10 16:15:02 +0100
+Processing by ShoppingListController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mInventory Load (0.3ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."user_id" = $1 LIMIT $2[0m  [["user_id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:7:in `index'
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = $1[0m  [["user_id", 10]]
+  ↳ app/controllers/shopping_list_controller.rb:8:in `index'
+  [1m[36mRecipeFood Load (0.4ms)[0m  [1m[34mSELECT "recipe_foods".* FROM "recipe_foods" WHERE "recipe_foods"."recipe_id" = $1[0m  [["recipe_id", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:10:in `block in index'
+  [1m[36mInventoryFood Load (0.4ms)[0m  [1m[34mSELECT "inventory_foods".* FROM "inventory_foods" WHERE "inventory_foods"."food_id" = $1 AND "inventory_foods"."inventory_id" = $2 LIMIT $3[0m  [["food_id", 2], ["inventory_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:12:in `block (2 levels) in index'
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:15:in `block (2 levels) in index'
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:17:in `block (2 levels) in index'
+  [1m[36mInventoryFood Load (1.0ms)[0m  [1m[34mSELECT "inventory_foods".* FROM "inventory_foods" WHERE "inventory_foods"."food_id" = $1 AND "inventory_foods"."inventory_id" = $2 LIMIT $3[0m  [["food_id", 3], ["inventory_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:12:in `block (2 levels) in index'
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:15:in `block (2 levels) in index'
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:17:in `block (2 levels) in index'
+  [1m[36mRecipeFood Load (0.4ms)[0m  [1m[34mSELECT "recipe_foods".* FROM "recipe_foods" WHERE "recipe_foods"."recipe_id" = $1[0m  [["recipe_id", 2]]
+  ↳ app/controllers/shopping_list_controller.rb:10:in `block in index'
+  [1m[36mCACHE InventoryFood Load (0.0ms)[0m  [1m[34mSELECT "inventory_foods".* FROM "inventory_foods" WHERE "inventory_foods"."food_id" = $1 AND "inventory_foods"."inventory_id" = $2 LIMIT $3[0m  [["food_id", 3], ["inventory_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:12:in `block (2 levels) in index'
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:15:in `block (2 levels) in index'
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:17:in `block (2 levels) in index'
+  [1m[36mCACHE InventoryFood Load (0.0ms)[0m  [1m[34mSELECT "inventory_foods".* FROM "inventory_foods" WHERE "inventory_foods"."food_id" = $1 AND "inventory_foods"."inventory_id" = $2 LIMIT $3[0m  [["food_id", 2], ["inventory_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:12:in `block (2 levels) in index'
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:15:in `block (2 levels) in index'
+  [1m[36mCACHE Food Load (0.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_list_controller.rb:17:in `block (2 levels) in index'
+  Rendering layout layouts/application.html.erb
+  Rendering shopping_list/index.html.erb within layouts/application
+  Rendered shopping_list/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 823)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 6595)
+Completed 200 OK in 49ms (Views: 10.7ms | ActiveRecord: 4.3ms | Allocations: 16279)
+>>>>>>> shooping_list
 
 
