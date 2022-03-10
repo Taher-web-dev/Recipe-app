@@ -17,7 +17,8 @@ table {
   margin-left: 30%;
 }
 
-td, th {
+td,
+th {
   border-right: 2px solid black;
   text-align: center;
 }
