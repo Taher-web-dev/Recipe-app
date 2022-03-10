@@ -35306,3 +35306,19 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 19ms (Views: 17.5ms | ActiveRecord: 0.0ms | Allocations: 7410)
 
 
+Started POST "/users/sign_in" for ::1 at 2022-03-10 19:53:40 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+Completed 401 Unauthorized in 4ms (Allocations: 421)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.6ms | Allocations: 165)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 8.4ms | Allocations: 755)
+  Rendered layout layouts/application.html.erb (Duration: 156.4ms | Allocations: 6695)
+Completed 200 OK in 165ms (Views: 160.2ms | Allocations: 7209)
+
+
