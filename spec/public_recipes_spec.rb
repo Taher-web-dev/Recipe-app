@@ -9,9 +9,9 @@ RSpec.describe 'public recipes', type: :system do
   end
   it 'test public recipes page functionnalities' do
     new_user = User.find_by(email: 'test@gmail.com')
-    unless Recipe.where(user_id: new_user.id).length >= 1 
-        recipe_1 = Recipe.new(name: 'couscous', public: true, user: new_user)
-        recipe_1.save!
+    unless Recipe.where(user_id: new_user.id).length >= 1
+      recipe1 = Recipe.new(name: 'couscous', public: true, user: new_user)
+      recipe1.save!
     end
     visit new_user_session_path
     within('#new_user') do

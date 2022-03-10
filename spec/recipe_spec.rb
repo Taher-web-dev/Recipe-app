@@ -9,9 +9,9 @@ RSpec.describe 'recipe', type: :system do
   end
   it 'test recipes page functionnalities' do
     new_user = User.find_by(email: 'test@gmail.com')
-    unless Recipe.where(user_id: new_user.id).length >= 1 
-        recipe_1 = Recipe.new(name: 'couscous', public: true, user: new_user)
-        recipe_1.save!
+    unless Recipe.where(user_id: new_user.id).length >= 1
+      recipe1 = Recipe.new(name: 'couscous', public: true, user: new_user)
+      recipe1.save!
     end
     visit new_user_session_path
     within('#new_user') do
@@ -26,7 +26,7 @@ RSpec.describe 'recipe', type: :system do
     expect(page).to have_content('Quantity')
     expect(page).to have_content('Value')
     expect(page).to have_content('Actions')
-    
+
     click_button 'Generate shopping list'
     expect(page).to have_current_path('/shopping_list')
   end
