@@ -163,3 +163,7 @@ body { height: 100vh; }
 .link-btn:hover {
   color: white;
 }
+
+.btn-primary {
+  margin-bottom: 30px;
+}
