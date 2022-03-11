@@ -1,24 +1,63 @@
-# README
+# Recipe-app
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> The Recipe app keeps track of all your recipes, ingredients, and inventory. It will allow you to save ingredients, keep track of what you have, create recipes, and generate a shopping list based on what you have and what you are missing from a recipe. Also, since sharing recipes is an important part of cooking the app allow you to make them public so anyone can access them.
 
-Things you may want to cover:
 
-* Ruby version
+<p align="center">
+  <img src="./app/assets/images/overview_ror _recadré.gif">
+</p>
 
-* System dependencies
 
-* Configuration
+## Built With
+- Ruby
+- git
+- Rails
+- postgresql
 
-* Database creation
+## Getting Started
 
-* Database initialization
+To get a local copy up and running follow these simple example steps.
+- Open terminal
+- Clone this project by the command: 
 
-* How to run the test suite
+```
+$ git clone git@github.com:Taher-web-dev/Recipe-app.git
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+- Then go to the main folder using the next command:
 
-* Deployment instructions
+```
+$ cd Recipe-app.
+```
+- Finally run <b>bundle install</b> in your console.
 
-* ...
+
+## Authors
+
+👤 **Taher Haggui**
+
+- GitHub: [@Taher-web-dev](https://github.com/Taher-web-dev)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/taher-haggui/)
+
+
+👤 **Shahier Nashaat**
+
+- GitHub: [@githubhandle](https://github.com/ShahierNashaat)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/shahier-nashaat-73519313a/)
+
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- A big thanks to my coding partners for the help and for Microverse team.
+
+

@@ -1,0 +1,22 @@
+
+<div class=home-page-wrapper>
+  <div class= "left-side">
+    <div class="home-menu-links">
+      <%= button_to 'Generate shopping list', "/shopping_list",method: :get, class:"btn btn-primary btn-lg" %>
+      <button  class="btn btn-success btn-lg" %><a href="/public_recipes" class="link-btn ">Public recipes</a></button>
+      <button  class="btn btn-success btn-lg" %><a href="/recipes" class="link-btn ">Recipes List</a></button>
+      <button  class="btn btn-success btn-lg" %><a href="/foods" class="link-btn ">Food List</a></button>
+      <%= button_to 'Edit Account', edit_user_registration_path,method: :get, class:"btn btn-warning btn-lg" %>
+      <%= button_to 'Logout', destroy_user_session_path,method: :delete, class:"btn btn-danger btn-lg" %>
+      
+    </div>
+  </div>
+  <div class="welcome-side">
+    <div class="greeting-text">
+      <img src="https://cdn-icons-png.flaticon.com/512/599/599335.png?w=740" alt="welcome-icone" width="20px" /> 
+      <h1> Welcome <%= current_user.name %>!</h1>
+    </div>
+    <p class="descrine-app">The Recipe app keeps track of all your recipes.</p>
+    
+  </div>
+</div>

@@ -1,0 +1,48 @@
+.food_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px;
+}
+
+.food_container form {
+  align-self: flex-end;
+  width: fit-content;
+}
+
+.food_container table {
+  width: 90%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.food_container table tr td,
+.food_container table tr th {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.food_container table button {
+  border: 0;
+  text-decoration: underline;
+  color: blue;
+}
+
+.new-food-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.new-food-container .food-form-container {
+  width: 50%;
+  min-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.new-food-container .food-form-container input,
+.new-food-container .food-form-container select {
+  width: 100%;
+}

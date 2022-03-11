@@ -1,0 +1,14 @@
+<%= stylesheet_link_tag "food", "data-turbo-track": "reload" %>
+
+<div class="new-food-container">
+  <h1>New food</h1>
+
+  <%= render "form", food: @food %>
+
+  <br>
+
+  <div>
+    <%= link_to "Back to foods", user_foods_path %>
+  </div>
+
+</div>

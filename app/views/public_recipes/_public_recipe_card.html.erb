@@ -1,0 +1,24 @@
+<% title= recipe.name %>
+<% id = recipe.id %>
+<% owner= User.find(recipe.user_id).name %>
+<% foods_list = RecipeFood.where(recipe_id: id) %>
+<% total_food = foods_list.length %>
+<% total_price = 0 %>
+<% foods_list.each do |food| %>
+  <% food_item = Food.find(food.food_id) %>
+  <% current_price = food_item.price * food.quantity %>
+  <% total_price += current_price %>
+<% end %>
+<a href="/users/<%= current_user.id %>/recipes/<%= id %>" class="recip-card-link">
+<div class="public-recip-card">
+  <div class="public-recip-general-inf">
+    <p> <%= title %> </p>
+    <p> By:<%= owner %> </p>
+  </div>
+  <div class="public-recip-statistic-inf">
+    <p> Total food items: <%= total_food %> </p>
+    <p> Total price: $<%= total_price %> </p>
+  </div>
+  
+</div>
+</a>

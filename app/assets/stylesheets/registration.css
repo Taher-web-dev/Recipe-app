@@ -1,0 +1,169 @@
+body { height: 100vh; }
+
+.sign_up-form {
+  width: 60%;
+  margin-left: 20%;
+}
+
+.sign-up {
+  margin-left: 20%;
+  margin-top: 100px;
+}
+
+.sign-btn {
+  margin-top: 30px;
+  width: 100%;
+  padding: 5px 0;
+
+  /* background-color: rgb(32, 112, 173); */
+
+  /* background-color: rgb(247,213,97); */
+  background-color: rgb(247, 165, 100);
+  color: white;
+
+  /* border: 2px solid rgb(247,213,97); */
+  border: rgb(247, 165, 100);
+  font-weight: 700;
+}
+
+.sign-in-wrapper {
+  display: grid;
+  grid-template-columns: 50% 49%;
+  width: 100%;
+  height: 80vh;
+}
+
+.sign-in {
+  grid-column: 1/ span 1;
+  background-color: white;
+}
+
+.sign-in-new {
+  grid-column: 2/ span 1;
+  background-color: rgb(247, 213, 97);
+}
+
+.sign-in-email {
+  width: 40%;
+  margin-left: 30%;
+  margin-bottom: 10px;
+  background-color: rgb(238, 230, 230);
+  padding: 5px 0;
+  border-color: rgb(238, 230, 230);
+}
+
+.log-in-title {
+  margin-left: 45%;
+  margin-top: 120px;
+  margin-bottom: 35px;
+}
+
+.remember-me {
+  margin-left: 30%;
+  margin-bottom: 10px;
+}
+
+.log-in-btn {
+  width: 100%;
+  background-color: rgb(247, 165, 100);
+  border-radius: 10px;
+  color: white;
+  font-weight: 700;
+  border-color: rgb(247, 165, 100);
+}
+
+.actions-log-in {
+  width: 40%;
+  margin-left: 30%;
+}
+
+.greeting-sign-in {
+  margin-left: 40%;
+  margin-top: 150px;
+  color: white;
+  margin-bottom: 25px;
+}
+
+.question-sign-in {
+  margin-left: 35%;
+  color: white;
+}
+
+.sign-in-links a {
+  color: white;
+  margin-left: 40%;
+  background-color: rgb(247, 165, 100);
+  text-decoration: none;
+}
+
+.sign-up-links {
+  margin-top: 10px;
+  border: rgb(32, 112, 173);
+  margin-left: 40%;
+}
+
+.sign-up-links a {
+  color: white;
+  background-color: rgb(32, 112, 173);
+  text-decoration: none;
+  padding: 5px 50px;
+}
+
+.alert {
+  color: rgb(241, 66, 81);
+}
+
+.notice {
+  color: rgb(111, 77, 34);
+}
+
+.home-page-wrapper {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+
+.left-side {
+  grid-column: 1 / span 1;
+  background-color: rgb(78, 57, 76);
+}
+
+.welcome-side {
+  grid-column: 2 / span 2;
+  margin-top: 120px;
+  width: 35%;
+  margin-left: 32.5%;
+}
+
+.greeting-text {
+  display: flex;
+}
+
+.home-menu-links {
+  margin-top: 100px;
+  margin-left: 15%;
+  width: 70%;
+}
+
+.btn {
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.btn-success {
+  text-decoration: none;
+}
+
+.link-btn {
+  color: white;
+  text-decoration: none;
+}
+
+.link-btn:hover {
+  color: white;
+}
+
+.btn-primary {
+  margin-bottom: 30px;
+}
