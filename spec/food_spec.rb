@@ -15,15 +15,14 @@ RSpec.describe 'Foods List', type: :system do
     end
     new_user = User.find_by(email: 'test@gmail.com')
     click_button 'Login'
-    visit "/foods/"
+    visit '/foods/'
     expect(page).to have_content('No Food To Show')
     expect(page).to have_content('Add Food')
-    unless Food.where(user_id: new_user.id).length >=1
-      new_food = Food.new(name:'Apple', measurement_unit: 'g', price: 1.7, user: new_user)
+    unless Food.where(user_id: new_user.id).length >= 1
+      new_food = Food.new(name: 'Apple', measurement_unit: 'g', price: 1.7, user: new_user)
       new_food.save!
     end
-    food = Food.find_by(name:'Apple')
-    visit "/foods"
+    visit '/foods'
     expect(page).to have_content('Food')
     expect(page).to have_content('Measurement Unit')
     expect(page).to have_content('Unit Price')
@@ -32,10 +31,10 @@ RSpec.describe 'Foods List', type: :system do
     expect(page).to have_content('g')
     expect(page).to have_content(1.7)
     expect(page).to have_content('Delete')
-    click_button "Add Food"
+    click_button 'Add Food'
     expect(page).to have_current_path("/users/#{new_user.id}/foods/new")
-    visit "/foods"
-    click_button "Delete"
+    visit '/foods'
+    click_button 'Delete'
     expect(page).to have_content('No Food To Show')
   end
 end
