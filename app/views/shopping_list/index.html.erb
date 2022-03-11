@@ -5,7 +5,7 @@
 <h1 class="title">Shopping List </h1>
 <div class= "general-inf">
   <p>Amount of food items to buy: <%= @amount_item %> </p>
-  <p>Total value of food needed: <%= @total_value %></p>
+  <p>Total value of food needed: $<%= @total_value %></p>
 </div>
 <table>
   <thead>
@@ -19,7 +19,7 @@
     <% (0...@amount_item).each do |i| %>
       <tr>
         <td><%= @missing_foods[i].name %> </td>
-        <td><%= @quantity[i] %> </td>
+        <td><%= @quantity[i] %> <%= @missing_foods[i].measurement_unit %> </td>
         <td><%= @prices[i] %> </td>
       </tr>
     <% end %>
