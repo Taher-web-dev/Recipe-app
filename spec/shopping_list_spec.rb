@@ -1,5 +1,5 @@
 require 'rails_helper'
-RSpec.describe 'Foods List', type: :system do
+RSpec.describe 'Shopping List', type: :system do
   before :all do
     unless User.find_by(email: 'test@gmail.com')
       new_user = User.new(name: 'test', email: 'test@gmail.com', password: '123456', password_confirmation: '123456')
