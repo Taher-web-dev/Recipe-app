@@ -95,8 +95,8 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.default_url_options = { host: 'recipe-track-app.herokuapp.com/', protocol: 'http' }
   config.action_mailer.smtp_settings = {
-    user_name:      ENV['SENDMAIL_USERNAME'],
-    password:       ENV['SENDMAIL_PASSWORD'],
+    user_name:      'ttaherhagui@gmail.com',
+    password:       '77471580t',
     domain:         'recipe-track-app.herokuapp.com/',
     address:       'smtp.gmail.com',
     port:          '587',
