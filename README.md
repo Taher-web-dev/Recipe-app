@@ -14,6 +14,10 @@
 - Rails
 - postgresql
 
+## Live Demo
+
+[Live Demo Link](https://recipe-track-app.herokuapp.com/)
+
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
