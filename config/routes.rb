@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  default_url_options :only_path => true
+  #default_url_options :only_path => true
   devise_for :users
 
   resources :foods, only: %i[index]
