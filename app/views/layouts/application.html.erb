@@ -8,6 +8,12 @@
     <%= stylesheet_link_tag "registration", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <% img_proj = image_url('overview_ror _recadré.gif') %>
+    <meta property="og:image" content=<%= img_proj %> >
+    <meta
+      name="description"
+      content="The Recipe app keeps track of all your recipes, ingredients, and inventory. It will allow you to save ingredients, keep track of what you have, create recipes, and generate a shopping list based on what you have and what you are missing from a recipe"
+    />
   </head>
 
   <body>
