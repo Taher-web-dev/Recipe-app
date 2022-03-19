@@ -4,7 +4,7 @@
 
 
 <p align="center">
-  <img src="./app/assets/images/overview_ror _recadré.gif">
+  <img src="./app/assets/images/overview.gif">
 </p>
 
 
